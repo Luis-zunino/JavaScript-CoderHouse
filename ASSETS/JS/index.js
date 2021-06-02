@@ -39,9 +39,11 @@ let depas = [
     "Tacuarembo",
     "Treinta y Tres",
   ];
+  //eligo donde lo voy a imprimir
   let depa = document.getElementById("depa");
-  
+  //recorro todo el array
   for (let i in depas) {
+      //lo imprimo
     depa.innerHTML += `<option id="${i}">${depas[i]}</option>`;
   }
   //Tipos de lugares
