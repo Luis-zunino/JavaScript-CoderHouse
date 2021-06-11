@@ -42,8 +42,15 @@ a {
   background-color: aquamarine; }
   .cajaOpciones div {
     margin: .8rem; }
-    .cajaOpciones div:not(:first-of-type) {
-      justify-content: flex-end; }
+
+.cajaResultados {
+  text-decoration: none; }
+  .cajaResultados ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .cajaResultados ul .opcionDestino {
+      list-style: none;
+      padding: 1rem; }
 
 .contenedorBuscador {
   width: 95%;

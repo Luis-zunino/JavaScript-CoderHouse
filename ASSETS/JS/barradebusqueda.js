@@ -390,28 +390,25 @@ function filtro() {
 
     let destino = viaje.nombre.toLowerCase();
     if (destino.indexOf(texto) !== -1) {
-      let departamento = viaje.departamento;
-      let img = viaje.img;
-      let nombre = viaje.nombre;
-      let costo = viaje.costo;
-      let info = viaje.info;
       document.getElementById("viajes").innerHTML += `
-      <ul>
+      
         <li  class="opcionDestino">
-          <img src="ASSETS/IMG/DESTINOS/unnamed(${img}).jpg">
+          <img src="ASSETS/IMG/DESTINOS/unnamed(${viaje.img}).jpg">
           <div> 
-            <h1>${nombre}</h1>
+            <h1>${viaje.nombre}</h1>
             <span class="contViaje">
-                <p>Departamento: ${departamento}</p>
-                <p>Precio por noche: ${costo}</p>
-                <p>${info}</p> 
+                <p>Departamento: ${viaje.departamento}</p>
+                <p>Precio por noche: ${viaje.costo}</p>
+                <p>${viaje.info}</p> 
             </span>
           </div>
         </li>
-      </ul>`;
-    }
+      `;}
+    //  else if (destino.indexOf(texto) === -1) {
+    //   document.getElementById("viajes").innerHTML = `
+    //   <h3>Lo sentimos no hemos encontrado el destino que nos indicas</h3> 
+    //   `;
+    // }
   }
 }
 filtro();
-
-
