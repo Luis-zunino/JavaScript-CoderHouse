@@ -25,13 +25,23 @@
 
 <body>
     <section class="contenedor" id="formulario">
+
         <input type="text" id="textonombre" placeholder="Dime tu nombre">
         <input type="button" id="nombreboton" value="Enviar">
 
     </section>
+
     <section>
+        <input type="text" id="buscador" placeholder="Lugar de destino">
+        
+        <input type="button" id="botonBuscador" value="Buscar">
+
+    </section>
+
+    <section>
+
+        <h1>Áreas temáticas</h1>
         <div class="contenedorBuscador">
-            <h1>Áreas temáticas</h1>
             <div class="cajaOpciones">
                 <select id="depa">
                     <!--Listar Departamentos-->
@@ -39,6 +49,7 @@
                 <select id="tipos">
                     <!--Tipos de lugares-->
                 </select>
+           
             </div>
             <div class="listaMenu estiloDesplegables" id="accordion" role="tablist" aria-multiselectable="true">
                 <!--Primer acordion-->
@@ -194,10 +205,12 @@
                 </div>
             </div>
             <!--Fin Tercer acordion-->
-
-            <div class="cajaMapaInteractivo">
-                <div id="map"></div>
-            </div>
+            <div id="viajes"></div>
+        </div>
+    </section>
+    <section>
+        <div class="cajaMapaInteractivo">
+            <div id="map"></div>
         </div>
     </section>
 
@@ -215,6 +228,7 @@
     <script src="ASSETS/JS/leaflet.extra-markers.min.js"></script>
     <!--PROPIOS-->
     <script src="ASSETS/JS/index.js"></script>
+    <script src="ASSETS/JS/destinos.js"></script>
     <script src="ASSETS/JS/mapa.js"></script>
 
 </body>
