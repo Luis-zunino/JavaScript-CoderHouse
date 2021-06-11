@@ -1,56 +1,3 @@
-class viaje {
-  constructor(tipo, img, departamento, nombre, costo, info) {
-    this.tipo = tipo;
-    this.img = img;
-    this.departamento = departamento;
-    this.nombre = nombre;
-    this.costo = costo;
-    this.info = info;
-  }
-}
-
-//input donde escribe lo que quiere buscar
-const buscado = document.getElementById("buscador");
-//boton asociado a lo que busco
-const botonBuscador = document.getElementById("botonBuscador");
-//escucha al boton y lanza la funcion
-botonBuscador.addEventListener("click", filtro);
-
-//escucho el input y lanza la funcion
-buscado.addEventListener("keyup", filtro);
-
-function filtro() {
-  document.getElementById("viajes").innerHTML = "";
-
-  for (let viaje of viajes) {
-    const texto = buscado.value.toLowerCase();
-
-    let destino = viaje.nombre.toLowerCase();
-    if (destino.indexOf(texto) !== -1) {
-      let departamento = viaje.departamento;
-      let img = viaje.img;
-      let nombre = viaje.nombre;
-      let costo = viaje.costo;
-      let info = viaje.info;
-      document.getElementById("viajes").innerHTML += `
-      <ul>
-        <li  class="opcionDestino">
-          <img src="ASSETS/IMG/DESTINOS/unnamed(${img}).jpg">
-          <div> 
-            <h1>${nombre}</h1>
-            <span class="contViaje">
-                <p>Departamento: ${departamento}</p>
-                <p>Precio por noche: ${costo}</p>
-                <p>${info}</p> 
-            </span>
-          </div>
-        </li>
-      </ul>`;
-    }
-  }
-}
-//filtro();
-
 const viajes = [
   {
     id: 1,
@@ -422,3 +369,49 @@ const viajes = [
     info: "Área protegida, humedal y naturaleza",
   },
 ];
+/*
+https://www.youtube.com/watch?v=NduleX-AC74&ab_channel=Bluuweb%21
+*/
+//input donde escribe lo que quiere buscar
+const buscado = document.getElementById("buscador");
+//boton asociado a lo que busco
+const botonBuscador = document.getElementById("botonBuscador");
+//escucha al boton y lanza la funcion
+botonBuscador.addEventListener("click", filtro);
+
+//escucho el input y lanza la funcion
+buscado.addEventListener("keyup", filtro);
+
+function filtro() {
+  document.getElementById("viajes").innerHTML = "";
+
+  for (let viaje of viajes) {
+    const texto = buscado.value.toLowerCase();
+
+    let destino = viaje.nombre.toLowerCase();
+    if (destino.indexOf(texto) !== -1) {
+      let departamento = viaje.departamento;
+      let img = viaje.img;
+      let nombre = viaje.nombre;
+      let costo = viaje.costo;
+      let info = viaje.info;
+      document.getElementById("viajes").innerHTML += `
+      <ul>
+        <li  class="opcionDestino">
+          <img src="ASSETS/IMG/DESTINOS/unnamed(${img}).jpg">
+          <div> 
+            <h1>${nombre}</h1>
+            <span class="contViaje">
+                <p>Departamento: ${departamento}</p>
+                <p>Precio por noche: ${costo}</p>
+                <p>${info}</p> 
+            </span>
+          </div>
+        </li>
+      </ul>`;
+    }
+  }
+}
+filtro();
+
+

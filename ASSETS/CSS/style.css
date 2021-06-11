@@ -12,7 +12,8 @@ html {
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Nunito', sans-serif; }
+  font-family: 'Nunito', sans-serif;
+  background-color: burlywood; }
 
 img {
   max-width: 100%; }
@@ -28,19 +29,26 @@ a {
   text-decoration: none; }
 
 .contenedor {
-  width: 80%;
+  width: 95%;
   margin: 10rem auto; }
   @media (max-width: 600px) {
     .contenedor {
       width: 95%;
       margin: 5rem auto; } }
 
+.cajaOpciones {
+  display: flex;
+  padding: 1rem;
+  background-color: aquamarine; }
+  .cajaOpciones div {
+    margin: .8rem; }
+    .cajaOpciones div:not(:first-of-type) {
+      justify-content: flex-end; }
+
 .contenedorBuscador {
   width: 95%;
   margin: auto;
   background-color: azure; }
-  .contenedorBuscador .cajaOpciones {
-    background-color: aquamarine; }
   .contenedorBuscador #map {
     width: 95%;
     height: 95%; }

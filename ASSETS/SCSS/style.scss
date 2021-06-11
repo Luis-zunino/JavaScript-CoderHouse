@@ -15,6 +15,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Nunito', sans-serif;
+    background-color: burlywood;
 }
 
 img {
@@ -35,7 +36,7 @@ a {
 }
 
 .contenedor {
-    width: 80%;
+    width: 95%;
     margin: 10rem auto;
 
     @media(max-width: 600px) {
@@ -43,17 +44,27 @@ a {
         margin: 5rem auto;
     }
 
+
+}
+
+.cajaOpciones {
+    display: flex;
+    padding: 1rem;
+    background-color: aquamarine;
+
+    div {
+        margin: .8rem;
+
+        &:not(:first-of-type) {
+            justify-content: flex-end;
+        }
+    }
 }
 
 .contenedorBuscador {
     width: 95%;
     margin: auto;
     background-color: azure;
-
-
-    .cajaOpciones {
-        background-color: aquamarine;
-    }
 
     #map {
         width: 95%;

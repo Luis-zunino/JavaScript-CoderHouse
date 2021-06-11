@@ -23,18 +23,38 @@
 
 </head>
 
-<body>
-    <section class="contenedor" id="formulario">
+<body class="contenedor">
+
+    <!-- <section id="formulario">
 
         <input type="text" id="textonombre" placeholder="Dime tu nombre">
         <input type="button" id="nombreboton" value="Enviar">
 
-    </section>
+    </section> -->
 
     <section>
-        <input type="text" id="buscador" placeholder="Lugar de destino">
-        
-        <input type="button" id="botonBuscador" value="Buscar">
+        <h1>Cartilla de opciones</h1>
+        <div class="cajaOpciones">
+            <!--BARRA DE BUSQUEDA DE DESTINOS Y LUGARES-->
+            <div>
+                <input type="text" id="buscador" placeholder="¿Qué lugar deseas visitar?">
+                <input type="button" id="botonBuscador" value="Buscar">
+            </div>
+            <!-- FIN BARRA DE BUSQUEDA DE DESTINOS Y LUGARES-->
+            <div>
+                <select id="depa">
+                    <!--Listar Departamentos-->
+                </select>
+            </div>
+            <div>
+                <select id="tipos">
+                    <!--Tipos de lugares-->
+                </select>
+            </div>
+        </div>
+        <!--RESULTADOS DE LOS DISTINTOS DESTINOS-->
+        <div class="" id="viajes"></div>
+        <!--FIN RESULTADOS DE LOS DISTINTOS DESTINOS-->
 
     </section>
 
@@ -42,15 +62,7 @@
 
         <h1>Áreas temáticas</h1>
         <div class="contenedorBuscador">
-            <div class="cajaOpciones">
-                <select id="depa">
-                    <!--Listar Departamentos-->
-                </select>
-                <select id="tipos">
-                    <!--Tipos de lugares-->
-                </select>
-           
-            </div>
+
             <div class="listaMenu estiloDesplegables" id="accordion" role="tablist" aria-multiselectable="true">
                 <!--Primer acordion-->
                 <div>
@@ -139,18 +151,18 @@
                         <div class="panel-body">
                             <div class="lista">
                                 <div><i class="fas fa-trophy"></i>Actividad Deportiva Remunerada</div>
-                                <div> <i class="fas fa-shuttle-van"></i>Agencias de Transporte Turístico</div>
-                                <div> <i class="fas fa-globe-americas"></i>Agencias de Viaje</div>
+                                <div><i class="fas fa-shuttle-van"></i>Agencias de Transporte Turístico</div>
+                                <div><i class="fas fa-globe-americas"></i>Agencias de Viaje</div>
                                 <div><i class="fas fa-luggage-cart"></i> Alojamientos Turísticos</div>
-                                <div> <i class="fas fa-bone"></i>Avistamieto de Cetáceos</div>
-                                <div> <i class="fas fa-glass-cheers"></i>Bodegas</div>
-                                <div> <i class="fas fa-hat-cowboy-side"></i>Establecimientos Turísticos Rurales</div>
-                                <div> <i class="fas fa-route"></i>Guías Turísticos</div>
-                                <div> <i class="fas fa-house-user"></i>Inmobiliarias </div>
-                                <div> <i class="fas fa-person-booth"></i>Organizadores Profesionales de Congresos </div>
-                                <div> <i class="fas fa-car"></i>Rentadoras de Autos</div>
-                                <div> <i class="fas fa-users"></i>Salas de Convenciones</div>
-                                <div> <i class="fas fa-hiking"></i>Turismo Aventura</div>
+                                <div><i class="fas fa-bone"></i>Avistamieto de Cetáceos</div>
+                                <div><i class="fas fa-glass-cheers"></i>Bodegas</div>
+                                <div><i class="fas fa-hat-cowboy-side"></i>Establecimientos Turísticos Rurales</div>
+                                <div><i class="fas fa-route"></i>Guías Turísticos</div>
+                                <div><i class="fas fa-house-user"></i>Inmobiliarias </div>
+                                <div><i class="fas fa-person-booth"></i>Organizadores Profesionales de Congresos </div>
+                                <div><i class="fas fa-car"></i>Rentadoras de Autos</div>
+                                <div><i class="fas fa-users"></i>Salas de Convenciones</div>
+                                <div><i class="fas fa-hiking"></i>Turismo Aventura</div>
                             </div>
                         </div>
                     </div>
@@ -205,9 +217,11 @@
                 </div>
             </div>
             <!--Fin Tercer acordion-->
-            <div id="viajes"></div>
+
         </div>
     </section>
+
+    <!--MAPA-->
     <section>
         <div class="cajaMapaInteractivo">
             <div id="map"></div>
@@ -216,7 +230,7 @@
 
 
     <!--SCRIPTS-->
-    <!--Acordiones-->
+    <!--ACORDIONES-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
         </script>
@@ -228,7 +242,7 @@
     <script src="ASSETS/JS/leaflet.extra-markers.min.js"></script>
     <!--PROPIOS-->
     <script src="ASSETS/JS/index.js"></script>
-    <script src="ASSETS/JS/destinos.js"></script>
+    <script src="ASSETS/JS/barradebusqueda.js"></script>
     <script src="ASSETS/JS/mapa.js"></script>
 
 </body>

@@ -17,26 +17,26 @@
 
 //Escucho cuando se hace click en el boton enviar y lo notifico con guardarnombre
 
-document.getElementById("nombreboton").addEventListener("click", guardarnombre);
+//document.getElementById("nombreboton").addEventListener("click", guardarnombre);
 
-function guardarnombre() {
-  //Guardo la informacion del imput en una variable
-  let nombreUsuario = textonombre.value;
-  //Creo un elemento H1
-  let mostrar = document.createElement("h1");
-  //Creo el mensaje que quiero mostrar
-  let mostrartexto = document.createTextNode(
-    `Bienvenido ${nombreUsuario} elige tu destino y nosotros por ti el camino!`
-  );
-  //Se lo adjudico como hijo al h1
-  mostrar.appendChild(mostrartexto);
+// function guardarnombre() {
+//   //Guardo la informacion del imput en una variable
+//   let nombreUsuario = textonombre.value;
+//   //Creo un elemento H1
+//   let mostrar = document.createElement("h1");
+//   //Creo el mensaje que quiero mostrar
+//   let mostrartexto = document.createTextNode(
+//     `Bienvenido ${nombreUsuario} elige tu destino y nosotros por ti el camino!`
+//   );
+//   //Se lo adjudico como hijo al h1
+//   mostrar.appendChild(mostrartexto);
 
-  //y vuelvo a adjudicar lo anterior como hijo al h1 que tengo como titulo
-  let mensajeBienvenida = document.getElementById("formulario").appendChild(mostrar);
+//   //y vuelvo a adjudicar lo anterior como hijo al h1 que tengo como titulo
+//   let mensajeBienvenida = document.getElementById("formulario").appendChild(mostrar);
 
-  // localStorage.setItem("User", nombreUsuario);
-  // localStorage.setItem("Bienvenida", mensajeBienvenida);
-}
+//   // localStorage.setItem("User", nombreUsuario);
+//   // localStorage.setItem("Bienvenida", mensajeBienvenida);
+// }
 //Listar Departamentos
 let depas = [
   "--Departamento--",
