@@ -1,3 +1,9 @@
+:root {
+    --primario: rgb(241, 241, 241);
+    --secundario: rgb(70, 219, 219);
+    --terciario: rgb(106, 164, 233);
+}
+
 /*Generales*/
 html {
     box-sizing: border-box;
@@ -15,7 +21,7 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background-color: rgba(224, 224, 196, 0.801);
+    background-color: var(--terciario);
 }
 
 img {
@@ -47,7 +53,7 @@ a {
 .cajaOpciones {
     display: flex;
     padding: 1rem;
-    background-color: rgb(70, 219, 219);
+    background-color: var(--primario) ;
     border-radius: 1rem;
     align-items: center;
     justify-content: space-between;
@@ -85,15 +91,19 @@ a {
 .cajaResultados {
     text-decoration: none;
 
-    ul {
+    .resultadoBusqueda {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
 
         .opcionDestino {
             list-style: none;
-            background-color: rgba(70, 219, 219, 0.308);
+            background-color: var(--primario);
             margin: 1rem;
             border-radius: 1rem;
+
+            h1:hover {
+                color: var(--terciario);
+            }
 
             img {
                 width: 100%;
@@ -105,31 +115,42 @@ a {
             }
         }
     }
+
+    .loSentimos {
+        grid-column: 1/4;
+        font-size: 4rem;
+        text-align: center;
+        padding: 1rem;
+        margin: 4rem 0;
+    }
 }
 
 //MAPA
-.cajaMapaInteractivo {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+.sectionMapa {
 
-    .listaMenu {
-        overflow-y: scroll;
-        height: 500px;
+    .cajaMapaInteractivo {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
 
-    }
+        .listaMenu {
+            overflow-y: scroll;
+            height: 500px;
 
-    .mapa {
-        position: relative;
-        width: 95%;
-        margin: auto;
-        height: 500px;
+        }
 
-        #map {
-            //tengo que ponerle absolute porque por defecto trae relative y no me lo muestra
-            // position: absolute;
-            padding: 2rem;
-            width: 100%;
-            height: 100%;
+        .mapa {
+            position: relative;
+            width: 95%;
+            margin: auto;
+            height: 500px;
+
+            #map {
+                //tengo que ponerle absolute porque por defecto trae relative y no me lo muestra
+                // position: absolute;
+                padding: 2rem;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }

@@ -1,3 +1,8 @@
+:root {
+  --primario: rgb(241, 241, 241);
+  --secundario: rgb(70, 219, 219);
+  --terciario: rgb(106, 164, 233); }
+
 /*Generales*/
 html {
   box-sizing: border-box;
@@ -13,7 +18,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: rgba(224, 224, 196, 0.801); }
+  background-color: var(--terciario); }
 
 img {
   max-width: 100%; }
@@ -36,7 +41,7 @@ a {
 .cajaOpciones {
   display: flex;
   padding: 1rem;
-  background-color: #46dbdb;
+  background-color: var(--primario);
   border-radius: 1rem;
   align-items: center;
   justify-content: space-between; }
@@ -57,32 +62,40 @@ a {
 
 .cajaResultados {
   text-decoration: none; }
-  .cajaResultados ul {
+  .cajaResultados .resultadoBusqueda {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; }
-    .cajaResultados ul .opcionDestino {
+    .cajaResultados .resultadoBusqueda .opcionDestino {
       list-style: none;
-      background-color: rgba(70, 219, 219, 0.308);
+      background-color: var(--primario);
       margin: 1rem;
       border-radius: 1rem; }
-      .cajaResultados ul .opcionDestino img {
+      .cajaResultados .resultadoBusqueda .opcionDestino h1:hover {
+        color: var(--terciario); }
+      .cajaResultados .resultadoBusqueda .opcionDestino img {
         width: 100%; }
-      .cajaResultados ul .opcionDestino div {
+      .cajaResultados .resultadoBusqueda .opcionDestino div {
         padding: 1rem;
         text-align: center; }
+  .cajaResultados .loSentimos {
+    grid-column: 1/4;
+    font-size: 4rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 4rem 0; }
 
-.cajaMapaInteractivo {
+.sectionMapa .cajaMapaInteractivo {
   display: grid;
   grid-template-columns: 1fr 3fr; }
-  .cajaMapaInteractivo .listaMenu {
+  .sectionMapa .cajaMapaInteractivo .listaMenu {
     overflow-y: scroll;
     height: 500px; }
-  .cajaMapaInteractivo .mapa {
+  .sectionMapa .cajaMapaInteractivo .mapa {
     position: relative;
     width: 95%;
     margin: auto;
     height: 500px; }
-    .cajaMapaInteractivo .mapa #map {
+    .sectionMapa .cajaMapaInteractivo .mapa #map {
       padding: 2rem;
       width: 100%;
       height: 100%; }

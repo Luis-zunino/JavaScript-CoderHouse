@@ -471,10 +471,13 @@ function filtro() {
     const texto = buscado.value.toLowerCase();
 
     let destino = viaje.nombre.toLowerCase();
+    /*
+    indexOf va a buscar lo que contenga la vairiable texto que es lo que se esta buscando
+   en ese momento en viaje.nombre
+    */
     if (destino.indexOf(texto) !== -1) {
       document.getElementById("viajes").innerHTML += `
-      
-        <li  class="opcionDestino">
+        <li class="opcionDestino">
           <img src="ASSETS/IMG/DESTINOS/unnamed(${viaje.img}).jpg">
           <div> 
             <h1>${viaje.nombre}</h1>
@@ -483,15 +486,15 @@ function filtro() {
                 <p>${viaje.info}</p> 
             </span>
           </div>
+          <p>Agregar a la agenda</p>
         </li>
       `;
     }
-
-    // if (destino.indexOf(texto) === 0) {
-    //   document.getElementById("viajes").innerHTML = `
-    //   <h3>Lo sentimos no hemos encontrado el destino que nos indicas</h3>
-    //    `;
-    // }
+  }
+  //
+  if (document.getElementById("viajes").innerHTML === "") {
+    document.getElementById("viajes").innerHTML = `
+      <h3 class="loSentimos">Lo sentimos no hemos encontrado el destino que nos indicas</h3>`;
   }
 }
 filtro();
@@ -520,5 +523,4 @@ function bubbleSort(a) {
 }
 
 // bubbleSort(viajes);
-
-console.log(viajes);
+//console.log(viajes);
