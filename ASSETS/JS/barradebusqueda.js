@@ -519,6 +519,6 @@ function bubbleSort(a) {
   }
 }
 
-bubbleSort(viajes);
+// bubbleSort(viajes);
 
 console.log(viajes);
