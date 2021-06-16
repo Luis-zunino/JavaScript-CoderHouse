@@ -1,3 +1,4 @@
+/*Generales*/
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -12,7 +13,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: rgba(246, 246, 244, 0.801); }
+  background-color: rgba(224, 224, 196, 0.801); }
 
 img {
   max-width: 100%; }
@@ -61,14 +62,24 @@ a {
     grid-template-columns: 1fr 1fr 1fr; }
     .cajaResultados ul .opcionDestino {
       list-style: none;
-      padding: 1rem; }
+      background-color: rgba(70, 219, 219, 0.308);
+      margin: 1rem;
+      border-radius: 1rem; }
+      .cajaResultados ul .opcionDestino img {
+        width: 100%; }
+      .cajaResultados ul .opcionDestino div {
+        padding: 1rem;
+        text-align: center; }
 
 .cajaMapaInteractivo {
-  position: relative;
-  width: 95%;
-  margin: auto;
-  height: 500px; }
-  .cajaMapaInteractivo #map {
-    padding: 2rem;
-    width: 100%;
-    height: 100%; }
+  display: grid;
+  grid-column: 1fr 3fr; }
+  .cajaMapaInteractivo .mapa {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    height: 500px; }
+    .cajaMapaInteractivo .mapa #map {
+      padding: 2rem;
+      width: 100%;
+      height: 100%; }

@@ -52,179 +52,189 @@
         </div>
         <!--RESULTADOS DE LOS DISTINTOS DESTINOS-->
         <div class="cajaResultados">
-            <ul id="viajes"></ul>
+            <ul id="viajes">
+
+            </ul>
         </div>
         <!--FIN RESULTADOS DE LOS DISTINTOS DESTINOS-->
 
     </section>
 
+
+
+
     <section>
 
         <h1>Áreas temáticas</h1>
-        <div class="contenedorBuscador">
+        <div class="cajaMapaInteractivo">
+            <div class="contenedorBuscador">
 
-            <div class="listaMenu" id="accordion" role="tablist" aria-multiselectable="true">
-                <!--Primer acordion-->
-                <div>
-                    <div role="tab" id="headingOne">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                            aria-expanded="true" aria-controls="collapseOne">
-                            <h4>Atractivos</h4>
-                        </a>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <div class="lista">
-                                <div><i class="fab fa-pagelines"></i>Zonas Verdes</div>
-                                <div><i class="fas fa-theater-masks"></i>Teatros</div>
-                                <div><i class="fas fa-landmark"></i></i>Bancos</div>
-                                <div><i class="fas fa-film"></i>Cines</div>
-                                <div><i class="fas fa-route"></i>Recorridos de Interes</div>
-                                <div><i class="fas fa-bed"></i>Hospedaje</div>
-                                <div><i class="fas fa-shuttle-van"></i>Transporte</div>
-                                <div><i class="fas fa-hiking"></i>Actividades aventura</div>
-                                <div><i class="fas fa-snowboarding"></i>Actividades productivas </div>
-                                <div><i class="fas fa-fish"></i>Acuarios </div>
-                                <div><i class="fas fa-hand-holding-water"></i>Aguas Termales</div>
-                                <div><i class="fas fa-cocktail"></i>Atractivo Turístico</div>
-                                <div><i class="fas fa-crow"></i>Avistamiento de aves</div>
-                                <div><i class="fas fa-fire-extinguisher"></i>Bomberos </div>
-                                <div><i class="fas fa-horse"></i>Cabalgatas </div>
-                                <div><i class="fas fa-campground"></i>Campings </div>
-                                <div><i class="fas fa-dice"></i>Casino </div>
-                                <div><i class="fas fa-map-signs"></i>Centro de Informes </div>
-                                <div><i class="fas fa-palette"></i>Centros culturales </div>
-                                <div><i class="fas fa-briefcase-medical"></i>Centros de salud </div>
-                                <div><i class="fas fa-street-view"></i>Centros MEC </div>
-                                <div><i class="fas fa-mountain"></i>Cerro </div>
-                                <div><i class="fas fa-bicycle"></i>Ciclovías </div>
-                                <div><i class="fas fa-exchange-alt"></i>Circuito </div>
-                                <div><i class="fas fa-dumbbell"></i>Club / Gimnasio / Plaza de deportes</div>
-                                <div><i class="fas fa-balance-scale"></i>Comisarías </div>
-                                <div><i class="fas fa-user-cog"></i>Construcción </div>
-                                <div><i class="fas fa-dungeon"></i>Cuevas / Grutas / Minas </div>
-                                <div><i class="fas fa-charging-station"></i>Estación de servicio</div>
-                                <div><i class="fas fa-subway"></i>Estación de tren</div>
-                                <div><i class="fas fa-futbol"></i>Estadio </div>
-                                <div><i class="fas fa-trophy"></i>Eventos deportivos </div>
-                                <div><i class="fab fa-watchman-monitoring"></i></i>Faro </div>
-                                <div><i class="fas fa-gifts"></i>Fiestas </div>
-                                <div><i class="fas fa-utensils"></i>Gastronomía / Comida característica</div>
-                                <div><i class="fas fa-pray"></i>Iglesias / Catedrales / Templos</div>
-                                <div><i class="fas fa-gamepad"></i>Juegos infantiles </div>
-                                <div><i class="fas fa-water"></i>Lago </div>
-                                <div><i class="fas fa-water"></i>Laguna </div>
-                                <div><i class="fas fa-book-reader"></i>Librerías </div>
-                                <div><i class="fas fa-person-booth"></i>Locutorios </div>
-                                <div><i class="fas fa-shopping-basket"></i>Mercado </div>
-                                <div><i class="fas fa-monument"></i>Monumento </div>
-                                <div><i class="fas fa-archway"></i>Museo / Sitio paleontológico / arqueológico </div>
-                                <div><i class="fas fa-map-marked"></i>Paradores </div>
-                                <div><i class="fas fa-tree"></i>Parque </div>
-                                <div><i class="fas fa-bowling-ball"></i>Parque de diversiones / temático</div>
-                                <div><i class="fas fa-umbrella-beach"></i>Playa </div>
-                                <div><i class="fas fa-hippo"></i>Reserva Animal / Zoológico Reserva Animal </div>
-                                <div><i class="fas fa-map"></i>Ruta </div>
-                                <div><i class="fas fa-tint"></i>Salto de agua / cascada</div>
-                                <div><i class="fas fa-compass"></i>Senderos peatonales </div>
-                                <div><i class="fas fa-shopping-bag"></i>Shopping / Hipermercado </div>
-                                <div><i class="fas fa-chess-rook"></i>Sitio histórico / Edificio emblemático </div>
-                                <div><i class="fas fa-globe"></i>Terminales </div>
-                                <div><i class="fas fa-binoculars"></i>Vistas panorámicas </div>
-                                <div><i class="fas fa-vest-patches"></i>Zonas de pesca</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Fin Primer acordion-->
-
-                <!--Segundo  acordion-->
-                <div>
-                    <div role="tab" id="headingTwo">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                            href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <h4>Operadores</h4>
-                        </a>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
-                            <div class="lista">
-                                <div><i class="fas fa-trophy"></i>Actividad Deportiva Remunerada</div>
-                                <div><i class="fas fa-shuttle-van"></i>Agencias de Transporte Turístico</div>
-                                <div><i class="fas fa-globe-americas"></i>Agencias de Viaje</div>
-                                <div><i class="fas fa-luggage-cart"></i> Alojamientos Turísticos</div>
-                                <div><i class="fas fa-bone"></i>Avistamieto de Cetáceos</div>
-                                <div><i class="fas fa-glass-cheers"></i>Bodegas</div>
-                                <div><i class="fas fa-hat-cowboy-side"></i>Establecimientos Turísticos Rurales</div>
-                                <div><i class="fas fa-route"></i>Guías Turísticos</div>
-                                <div><i class="fas fa-house-user"></i>Inmobiliarias </div>
-                                <div><i class="fas fa-person-booth"></i>Organizadores Profesionales de Congresos </div>
-                                <div><i class="fas fa-car"></i>Rentadoras de Autos</div>
-                                <div><i class="fas fa-users"></i>Salas de Convenciones</div>
-                                <div><i class="fas fa-hiking"></i>Turismo Aventura</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Segundo  acordion-->
-                <!--Tercer acordion-->
-                <div id="sub-accordion" role="tablist" aria-multiselectable="true">
-
-                    <!--Primer sub acordion-->
+                <div class="listaMenu" id="accordion" role="tablist" aria-multiselectable="true">
+                    <!--Primer acordion-->
                     <div>
-                        <div role="tab" id="subHeadingOne">
-                            <a role="button" data-toggle="collapse" data-parent="#sub-accordion" href="#collapseSubOne"
-                                aria-expanded="true" aria-controls="collapseSubOne">
-                                <h4>Otros</h4>
+                        <div role="tab" id="headingOne">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                <h4>Atractivos</h4>
                             </a>
-
                         </div>
-                        <div id="collapseSubOne" class=panel-collapse collapse" role="tabpanel"
-                            aria-labelledby="subHeadingOne">
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingOne">
                             <div class="panel-body">
-                                <!--Segundo sub acordion-->
-                                <div>
-                                    <div role="tab" id="subHeadingTwo">
-
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#sub-accordion" href="#collapseSubTwo" aria-expanded="false"
-                                            aria-controls="collapseSubTwo">
-                                            <h5>Intendencia Montevideo</h5>
-                                        </a>
-
+                                <div class="lista">
+                                    <div><i class="fab fa-pagelines"></i>Zonas Verdes</div>
+                                    <div><i class="fas fa-theater-masks"></i>Teatros</div>
+                                    <div><i class="fas fa-landmark"></i></i>Bancos</div>
+                                    <div><i class="fas fa-film"></i>Cines</div>
+                                    <div><i class="fas fa-route"></i>Recorridos de Interes</div>
+                                    <div><i class="fas fa-bed"></i>Hospedaje</div>
+                                    <div><i class="fas fa-shuttle-van"></i>Transporte</div>
+                                    <div><i class="fas fa-hiking"></i>Actividades aventura</div>
+                                    <div><i class="fas fa-snowboarding"></i>Actividades productivas </div>
+                                    <div><i class="fas fa-fish"></i>Acuarios </div>
+                                    <div><i class="fas fa-hand-holding-water"></i>Aguas Termales</div>
+                                    <div><i class="fas fa-cocktail"></i>Atractivo Turístico</div>
+                                    <div><i class="fas fa-crow"></i>Avistamiento de aves</div>
+                                    <div><i class="fas fa-fire-extinguisher"></i>Bomberos </div>
+                                    <div><i class="fas fa-horse"></i>Cabalgatas </div>
+                                    <div><i class="fas fa-campground"></i>Campings </div>
+                                    <div><i class="fas fa-dice"></i>Casino </div>
+                                    <div><i class="fas fa-map-signs"></i>Centro de Informes </div>
+                                    <div><i class="fas fa-palette"></i>Centros culturales </div>
+                                    <div><i class="fas fa-briefcase-medical"></i>Centros de salud </div>
+                                    <div><i class="fas fa-street-view"></i>Centros MEC </div>
+                                    <div><i class="fas fa-mountain"></i>Cerro </div>
+                                    <div><i class="fas fa-bicycle"></i>Ciclovías </div>
+                                    <div><i class="fas fa-exchange-alt"></i>Circuito </div>
+                                    <div><i class="fas fa-dumbbell"></i>Club / Gimnasio / Plaza de deportes</div>
+                                    <div><i class="fas fa-balance-scale"></i>Comisarías </div>
+                                    <div><i class="fas fa-user-cog"></i>Construcción </div>
+                                    <div><i class="fas fa-dungeon"></i>Cuevas / Grutas / Minas </div>
+                                    <div><i class="fas fa-charging-station"></i>Estación de servicio</div>
+                                    <div><i class="fas fa-subway"></i>Estación de tren</div>
+                                    <div><i class="fas fa-futbol"></i>Estadio </div>
+                                    <div><i class="fas fa-trophy"></i>Eventos deportivos </div>
+                                    <div><i class="fab fa-watchman-monitoring"></i></i>Faro </div>
+                                    <div><i class="fas fa-gifts"></i>Fiestas </div>
+                                    <div><i class="fas fa-utensils"></i>Gastronomía / Comida característica</div>
+                                    <div><i class="fas fa-pray"></i>Iglesias / Catedrales / Templos</div>
+                                    <div><i class="fas fa-gamepad"></i>Juegos infantiles </div>
+                                    <div><i class="fas fa-water"></i>Lago </div>
+                                    <div><i class="fas fa-water"></i>Laguna </div>
+                                    <div><i class="fas fa-book-reader"></i>Librerías </div>
+                                    <div><i class="fas fa-person-booth"></i>Locutorios </div>
+                                    <div><i class="fas fa-shopping-basket"></i>Mercado </div>
+                                    <div><i class="fas fa-monument"></i>Monumento </div>
+                                    <div><i class="fas fa-archway"></i>Museo / Sitio paleontológico / arqueológico
                                     </div>
-                                    <div id="collapseSubTwo" class="panel-collapse collapse" role="tabpanel"
-                                        aria-labelledby="headingSubTwo">
-                                        <div class="panel-body">
-                                            <div class="lista">
-                                                <div> <i class="fas fa-map-marker"></i>Paradas de omnibus </div>
-                                                <div> <i class="fas fa-route"></i>Recorrido Bus Turistico</div>
-                                                <div> <i class="fas fa-tablet-alt"></i>Espejos de agua de Montevideo
-                                                </div>
-                                                <div> <i class="fas fa-handshake"></i>Espacios libres de Montevideo
+                                    <div><i class="fas fa-map-marked"></i>Paradores </div>
+                                    <div><i class="fas fa-tree"></i>Parque </div>
+                                    <div><i class="fas fa-bowling-ball"></i>Parque de diversiones / temático</div>
+                                    <div><i class="fas fa-umbrella-beach"></i>Playa </div>
+                                    <div><i class="fas fa-hippo"></i>Reserva Animal / Zoológico Reserva Animal </div>
+                                    <div><i class="fas fa-map"></i>Ruta </div>
+                                    <div><i class="fas fa-tint"></i>Salto de agua / cascada</div>
+                                    <div><i class="fas fa-compass"></i>Senderos peatonales </div>
+                                    <div><i class="fas fa-shopping-bag"></i>Shopping / Hipermercado </div>
+                                    <div><i class="fas fa-chess-rook"></i>Sitio histórico / Edificio emblemático </div>
+                                    <div><i class="fas fa-globe"></i>Terminales </div>
+                                    <div><i class="fas fa-binoculars"></i>Vistas panorámicas </div>
+                                    <div><i class="fas fa-vest-patches"></i>Zonas de pesca</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Fin Primer acordion-->
+
+                    <!--Segundo  acordion-->
+                    <div>
+                        <div role="tab" id="headingTwo">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h4>Operadores</h4>
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <div class="lista">
+                                    <div><i class="fas fa-trophy"></i>Actividad Deportiva Remunerada</div>
+                                    <div><i class="fas fa-shuttle-van"></i>Agencias de Transporte Turístico</div>
+                                    <div><i class="fas fa-globe-americas"></i>Agencias de Viaje</div>
+                                    <div><i class="fas fa-luggage-cart"></i> Alojamientos Turísticos</div>
+                                    <div><i class="fas fa-bone"></i>Avistamieto de Cetáceos</div>
+                                    <div><i class="fas fa-glass-cheers"></i>Bodegas</div>
+                                    <div><i class="fas fa-hat-cowboy-side"></i>Establecimientos Turísticos Rurales</div>
+                                    <div><i class="fas fa-route"></i>Guías Turísticos</div>
+                                    <div><i class="fas fa-house-user"></i>Inmobiliarias </div>
+                                    <div><i class="fas fa-person-booth"></i>Organizadores Profesionales de Congresos
+                                    </div>
+                                    <div><i class="fas fa-car"></i>Rentadoras de Autos</div>
+                                    <div><i class="fas fa-users"></i>Salas de Convenciones</div>
+                                    <div><i class="fas fa-hiking"></i>Turismo Aventura</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Segundo  acordion-->
+                    <!--Tercer acordion-->
+                    <div id="sub-accordion" role="tablist" aria-multiselectable="true">
+
+                        <!--Primer sub acordion-->
+                        <div>
+                            <div role="tab" id="subHeadingOne">
+                                <a role="button" data-toggle="collapse" data-parent="#sub-accordion"
+                                    href="#collapseSubOne" aria-expanded="true" aria-controls="collapseSubOne">
+                                    <h4>Otros</h4>
+                                </a>
+
+                            </div>
+                            <div id="collapseSubOne" class=panel-collapse collapse" role="tabpanel"
+                                aria-labelledby="subHeadingOne">
+                                <div class="panel-body">
+                                    <!--Segundo sub acordion-->
+                                    <div>
+                                        <div role="tab" id="subHeadingTwo">
+
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#sub-accordion" href="#collapseSubTwo"
+                                                aria-expanded="false" aria-controls="collapseSubTwo">
+                                                <h5>Intendencia Montevideo</h5>
+                                            </a>
+
+                                        </div>
+                                        <div id="collapseSubTwo" class="panel-collapse collapse" role="tabpanel"
+                                            aria-labelledby="headingSubTwo">
+                                            <div class="panel-body">
+                                                <div class="lista">
+                                                    <div> <i class="fas fa-map-marker"></i>Paradas de omnibus </div>
+                                                    <div> <i class="fas fa-route"></i>Recorrido Bus Turistico</div>
+                                                    <div> <i class="fas fa-tablet-alt"></i>Espejos de agua de Montevideo
+                                                    </div>
+                                                    <div> <i class="fas fa-handshake"></i>Espacios libres de Montevideo
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!--Segundo sub acordion-->
                                 </div>
-                                <!--Segundo sub acordion-->
                             </div>
                         </div>
+                        <!--Fin Primer sub acordion-->
+
                     </div>
-                    <!--Fin Primer sub acordion-->
-
                 </div>
+                <!--Fin Tercer acordion-->
+
             </div>
-            <!--Fin Tercer acordion-->
 
-        </div>
-    </section>
+            <!--MAPA-->
 
-    <!--MAPA-->
-    <section>
-        <div class="cajaMapaInteractivo">
-            <div id="map"></div>
+            <div class="mapa">
+                <div id="map"></div>
+            </div>
         </div>
     </section>
 
