@@ -121,11 +121,11 @@ const viajes = [
     cordY: -54.12900862782401,
   },
   {
-    departamento: "Carmelo",
+    departamento: "Colonia",
     id: 12,
     tipo: "playa",
     img: "13",
-    nombre: "Colonia",
+    nombre: "Carmelo",
     costo: 500,
     info: "Municipio uruguayo famoso por la Playa Seré, el Río de la Plata y la Rambla de los ituyentes",
     cordX: -33.99568310206379,
@@ -319,7 +319,7 @@ const viajes = [
     cordY: -56.163532,
   },
   {
-    departamento: "",
+    departamento: "Salto",
     id: 30,
     tipo: "ciudad",
     img: "31",
@@ -352,7 +352,7 @@ const viajes = [
     cordY: -56.163532,
   },
   {
-    departamento: "",
+    departamento: "Maldonado",
     id: 33,
     tipo: "ciudad",
     img: "34",
@@ -407,7 +407,7 @@ const viajes = [
     cordY: -56.163532,
   },
   {
-    departamento: "",
+    departamento: "Rocha",
     id: 38,
     tipo: "ciudad",
     img: "39",
@@ -458,14 +458,14 @@ https://www.youtube.com/watch?v=NduleX-AC74&ab_channel=Bluuweb%21
 const buscado = document.getElementById("buscador");
 //boton asociado a lo que busco
 const botonBuscador = document.getElementById("botonBuscador");
-//escucha al boton y lanza la funcion
+//escucha al boton y lanza la funcion al hacer click
 botonBuscador.addEventListener("click", filtro);
-
-//escucho el input y lanza la funcion
+//escucho el input y lanza la funcion en tiempo real
 buscado.addEventListener("keyup", filtro);
 
 function filtro() {
   document.getElementById("viajes").innerHTML = "";
+  bubbleSort(viajes);
 
   for (let viaje of viajes) {
     const texto = buscado.value.toLowerCase();
@@ -480,7 +480,6 @@ function filtro() {
             <h1>${viaje.nombre}</h1>
             <span class="contViaje">
                 <p>Departamento: ${viaje.departamento}</p>
-                <p>Precio por noche: ${viaje.costo}</p>
                 <p>${viaje.info}</p> 
             </span>
           </div>
@@ -498,9 +497,28 @@ function filtro() {
 filtro();
 
 // let busquedaOrdenada = viajes.sort((a, b) => {
-//   if (a.nombre.toLocaleLowerCase() < b.nombre.toLocaleLowerCase()) return -1;
-//   if (a.nombre.toLocaleLowerCase() < b.nombre.toLocaleLowerCase()) return 1;
+//   if (a.departamento.toLocaleLowerCase() < b.departamento.toLocaleLowerCase())
+//     return -1;
+//   if (a.departamento.toLocaleLowerCase() < b.departamento.toLocaleLowerCase())
+//     return 1;
 //   return 0;
 // });
 
 // console.log(busquedaOrdenada);
+
+//Ordenar Arrays de objetos metodo burbuja.
+function bubbleSort(a) {
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < a.length - i - 1; j++) {
+      if (a[j].departamento > a[j + 1].departamento) {
+        let tmp = a[j];
+        a[j] = a[j + 1];
+        a[j + 1] = tmp;
+      }
+    }
+  }
+}
+
+bubbleSort(viajes);
+
+console.log(viajes);
