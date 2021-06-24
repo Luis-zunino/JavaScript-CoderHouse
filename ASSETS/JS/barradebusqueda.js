@@ -455,16 +455,16 @@ const viajes = [
 https://www.youtube.com/watch?v=NduleX-AC74&ab_channel=Bluuweb%21
 */
 //input donde escribe lo que quiere buscar
-const buscado = document.getElementById("buscador");
+const buscado = document.querySelector("#buscador");
 //boton asociado a lo que busco
-const botonBuscador = document.getElementById("botonBuscador");
+const botonBuscador = document.querySelector("#botonBuscador");
 //escucha al boton y lanza la funcion al hacer click
 botonBuscador.addEventListener("click", filtro);
 //escucho el input y lanza la funcion en tiempo real
 buscado.addEventListener("keyup", filtro);
 
 function filtro() {
-  document.getElementById("viajes").innerHTML = "";
+  document.querySelector("#viajes").innerHTML = "";
   bubbleSort(viajes);
 
   for (let viaje of viajes) {
@@ -476,7 +476,7 @@ function filtro() {
    en ese momento en viaje.nombre
     */
     if (destino.indexOf(texto) !== -1) {
-      document.getElementById("viajes").innerHTML += `
+      document.querySelector("#viajes").innerHTML += `
         <li class="opcionDestino">
           <img src="ASSETS/IMG/DESTINOS/unnamed(${viaje.img}).jpg">
           <div> 
@@ -487,8 +487,30 @@ function filtro() {
             </span>
           </div>
           <p>Agregar a la agenda</p>
+          <p>Ver en el Mapa</p>
+
         </li>
       `;
+
+      //MAPA=========================================================
+    
+      document.querySelector("#map").innerHTML += `
+       L.marker([${viaje.cordX}, ${viaje.cordY}])
+         .addTo(map)
+         .bindPopup(
+           <img src="ASSETS/IMG/DESTINOS/unnamed(${viaje.img}).jpg">
+         <div> 
+           <h1>${viaje.nombre}</h1>
+           <span>
+               <p>Departamento: ${viaje.departamento}</p>
+               <p>${viaje.info}</p> 
+           </span>
+         </div>
+         )
+         .openPopup();
+      `
+
+      //FIN MAPA=========================================================
     }
   }
   //
@@ -498,16 +520,6 @@ function filtro() {
   }
 }
 filtro();
-
-// let busquedaOrdenada = viajes.sort((a, b) => {
-//   if (a.departamento.toLocaleLowerCase() < b.departamento.toLocaleLowerCase())
-//     return -1;
-//   if (a.departamento.toLocaleLowerCase() < b.departamento.toLocaleLowerCase())
-//     return 1;
-//   return 0;
-// });
-
-// console.log(busquedaOrdenada);
 
 //Ordenar Arrays de objetos metodo burbuja.
 function bubbleSort(a) {
@@ -521,6 +533,3 @@ function bubbleSort(a) {
     }
   }
 }
-
-// bubbleSort(viajes);
-//console.log(viajes);
