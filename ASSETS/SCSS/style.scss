@@ -21,7 +21,30 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background-color: var(--terciario);
+    //background-color: var(--terciario);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    nav {
+        position: fixed;
+        height: 100%;
+
+        ul {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row: auto;
+
+            li {
+                align-content: space-between;
+
+                a {
+                    // display: block;
+                    background-color: var(--primario);
+                }
+            }
+        }
+    }
 }
 
 img {
@@ -31,19 +54,27 @@ img {
 li,
 ul {
     text-decoration: none;
+    list-style: none;
+
 }
 
 a {
     text-decoration: none;
+    list-style: none;
+
 }
 
 .contenedor {
-    width: 95%;
-    margin: 10rem auto;
+    // width: 95%;
+    margin: auto;
 
     @media(max-width: 600px) {
         width: 95%;
         margin: 5rem auto;
+    }
+
+    .contenido {
+        grid-column: 2/3;
     }
 
 
@@ -53,7 +84,7 @@ a {
 .cajaOpciones {
     display: flex;
     padding: 1rem;
-    background-color: var(--primario) ;
+    background-color: var(--primario);
     border-radius: 1rem;
     align-items: center;
     justify-content: space-between;
@@ -96,7 +127,6 @@ a {
         grid-template-columns: 1fr 1fr 1fr;
 
         .opcionDestino {
-            list-style: none;
             background-color: var(--primario);
             margin: 1rem;
             border-radius: 1rem;

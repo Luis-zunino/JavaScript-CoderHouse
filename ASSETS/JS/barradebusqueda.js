@@ -491,26 +491,6 @@ function filtro() {
 
         </li>
       `;
-
-      //MAPA=========================================================
-    
-      document.querySelector("#map").innerHTML += `
-       L.marker([${viaje.cordX}, ${viaje.cordY}])
-         .addTo(map)
-         .bindPopup(
-           <img src="ASSETS/IMG/DESTINOS/unnamed(${viaje.img}).jpg">
-         <div> 
-           <h1>${viaje.nombre}</h1>
-           <span>
-               <p>Departamento: ${viaje.departamento}</p>
-               <p>${viaje.info}</p> 
-           </span>
-         </div>
-         )
-         .openPopup();
-      `
-
-      //FIN MAPA=========================================================
     }
   }
   //

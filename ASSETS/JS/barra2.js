@@ -1,7 +1,6 @@
 const viajes = [
   {
     departamento: "Montevideo",
-    id: 1,
     tipo: "ciudad",
     img: "2",
     nombre: "Montevideo",
@@ -12,7 +11,6 @@ const viajes = [
   },
   {
     departamento: "Maldonado",
-    id: 2,
     tipo: "ciudad",
     img: "3",
     nombre: "Punta del Este",
@@ -23,7 +21,6 @@ const viajes = [
   },
   {
     departamento: "Colonia",
-    id: 3,
     tipo: "ciudad",
     img: "4",
     nombre: "Colonia del Sacramento",
@@ -34,18 +31,16 @@ const viajes = [
   },
   {
     departamento: "Colonia",
-    id: 4,
     tipo: "ciudad",
     img: "6",
     nombre: "Río de la Plata",
     costo: 500,
     info: "Estuario de los ríos Paraná y Uruguay",
-    cordX: -34.517450565836114, 
+    cordX: -34.517450565836114,
     cordY: -57.4683802262987,
   },
   {
     departamento: "Rocha",
-    id: 5,
     tipo: "playa",
     img: "7",
     nombre: "Punta del Diablo",
@@ -56,7 +51,6 @@ const viajes = [
   },
   {
     departamento: "Maldonado",
-    id: 6,
     tipo: "playa",
     img: "7",
     nombre: "Piriápolis",
@@ -67,7 +61,6 @@ const viajes = [
   },
   {
     departamento: "Durazno",
-    id: 7,
     tipo: "ciudad",
     img: "8",
     nombre: "José Ignacio",
@@ -78,7 +71,6 @@ const viajes = [
   },
   {
     departamento: "Salto",
-    id: 8,
     tipo: "ciudad",
     img: "9",
     nombre: "Salto",
@@ -89,7 +81,6 @@ const viajes = [
   },
   {
     departamento: "Rocha",
-    id: 9,
     tipo: "ciudad",
     img: "10",
     nombre: "La Paloma",
@@ -100,7 +91,7 @@ const viajes = [
   },
   {
     departamento: "Rocha",
-    id: 10,
+
     tipo: "ciudad",
     info: "Departamento del este de Uruguay con playas en la Punta del Diablo y tortugas marinas en La Coronilla.",
     img: "11",
@@ -111,7 +102,7 @@ const viajes = [
   },
   {
     departamento: "Maldonado",
-    id: 11,
+
     tipo: "playa",
     img: "12",
     nombre: "La Pedrera",
@@ -122,7 +113,7 @@ const viajes = [
   },
   {
     departamento: "Colonia",
-    id: 12,
+
     tipo: "playa",
     img: "13",
     nombre: "Carmelo",
@@ -133,18 +124,18 @@ const viajes = [
   },
   {
     departamento: "Rocha",
-    id: 13,
+
     tipo: "playa",
     img: "14",
     nombre: "Rocha",
     costo: 500,
     info: "Playa y parque",
     cordX: -34.48117328722865,
-    cordY:  -54.33039747169805,
+    cordY: -54.33039747169805,
   },
   {
     departamento: "Río Negro",
-    id: 14,
+
     tipo: "ciudad",
     img: "15",
     nombre: "Fray Bentos",
@@ -155,7 +146,7 @@ const viajes = [
   },
   {
     departamento: "Rocha",
-    id: 15,
+
     tipo: "ciudad",
     img: "16",
     nombre: "Chuy",
@@ -166,7 +157,7 @@ const viajes = [
   },
   {
     departamento: "Canelones",
-    id: 16,
+
     tipo: "ciudad",
     img: "17",
     nombre: "Atlántida",
@@ -177,7 +168,7 @@ const viajes = [
   },
   {
     departamento: "Rocha",
-    id: 17,
+
     tipo: "ciudad",
     img: "18",
     nombre: "Barra de Valizas",
@@ -188,7 +179,7 @@ const viajes = [
   },
   {
     departamento: "Rocha",
-    id: 18,
+
     tipo: "ciudad",
     img: "19",
     nombre: "Termas del Arapey",
@@ -199,7 +190,7 @@ const viajes = [
   },
   {
     departamento: "Rocha",
-    id: 19,
+
     tipo: "ciudad",
     img: "20",
     nombre: "Garzón",
@@ -210,7 +201,7 @@ const viajes = [
   },
   {
     departamento: "Maldonado",
-    id: 20,
+
     tipo: "playa",
     img: "21",
     nombre: "Maldonado",
@@ -221,7 +212,7 @@ const viajes = [
   },
   {
     departamento: "Lavalleja",
-    id: 21,
+
     tipo: "playa",
     img: "22",
     nombre: "Minas",
@@ -232,7 +223,7 @@ const viajes = [
   },
   {
     departamento: "Rivera",
-    id: 22,
+
     tipo: "ciudad",
     img: "23",
     nombre: "Rivera",
@@ -243,7 +234,7 @@ const viajes = [
   },
   {
     departamento: "Colonia",
-    id: 23,
+
     tipo: "ciudad",
     img: "24",
     nombre: "Nueva Helvecia",
@@ -254,7 +245,7 @@ const viajes = [
   },
   {
     departamento: "Rocha",
-    id: 24,
+
     tipo: "ciudad",
     img: "25",
     nombre: "San Gregorio de Polanco",
@@ -265,7 +256,7 @@ const viajes = [
   },
   {
     departamento: "Tacuarembó",
-    id: 25,
+
     tipo: "ciudad",
     img: "26",
     nombre: "Tacuarembó",
@@ -276,7 +267,7 @@ const viajes = [
   },
   {
     departamento: "Maldonado",
-    id: 26,
+
     tipo: "ciudad",
     img: "27",
     nombre: "Pan de Azúcar",
@@ -287,7 +278,7 @@ const viajes = [
   },
   {
     departamento: "Lavalleja",
-    id: 27,
+
     tipo: "ciudad",
     img: "28",
     nombre: "Villa Serrana",
@@ -298,7 +289,7 @@ const viajes = [
   },
   {
     departamento: "Maldonado",
-    id: 28,
+
     tipo: "ciudad",
     img: "29",
     nombre: "Sauce de Portezuelo",
@@ -309,7 +300,7 @@ const viajes = [
   },
   {
     departamento: "Paysandú",
-    id: 29,
+
     tipo: "ciudad",
     img: "30",
     nombre: "Paysandú",
@@ -320,7 +311,7 @@ const viajes = [
   },
   {
     departamento: "Salto",
-    id: 30,
+
     tipo: "ciudad",
     img: "31",
     nombre: "Termas del Dayman",
@@ -331,123 +322,121 @@ const viajes = [
   },
   {
     departamento: "Canelones",
-    id: 31,
+
     tipo: "ciudad",
     img: "32",
     nombre: "Canelones",
     costo: 500,
     info: "Bodega, playa, viña, vino y cata de vinos",
     cordX: -34.52923392538573,
-    cordY:  -56.2872517251743,
+    cordY: -56.2872517251743,
   },
   {
     departamento: "Maldonado",
-    id: 32,
+
     tipo: "ciudad",
     img: "33",
     nombre: "Laguna Garzón",
     costo: 500,
     info: "Área protegida, kitesurf y windsurf",
     cordX: -34.76695453863073,
-    cordY:  -54.56003935825548,
+    cordY: -54.56003935825548,
   },
   {
     departamento: "Maldonado",
-    id: 33,
+
     tipo: "ciudad",
     img: "34",
     nombre: "Manantiales",
     costo: 500,
     info: "Pueblo animado frente al mar, con surf en la playa Bikini, una intensa vida nocturna, y tiendas y restaurantes modernos.",
     cordX: -34.904888661618195,
-    cordY:  -54.827465866706035,
+    cordY: -54.827465866706035,
   },
   {
     departamento: "Durazno",
-    id: 34,
+
     tipo: "ciudad",
     img: "35",
     nombre: "Durazno",
     costo: 500,
     info: "Jardín zoológico, monumento e historia",
-    cordX: -33.38241191129658, 
+    cordX: -33.38241191129658,
     cordY: -56.52769430457502,
   },
   {
     departamento: "Paysandú",
-    id: 35,
+
     tipo: "ciudad",
     img: "36",
     nombre: "Paysandú",
     costo: 500,
     info: "Monumento, basílica y aguas termales",
-    cordX: -32.27055039292046, 
+    cordX: -32.27055039292046,
     cordY: -58.0804682489409,
   },
   {
     departamento: "San José",
-    id: 36,
+
     tipo: "ciudad",
     img: "37",
     nombre: "San José de Mayo",
     costo: 500,
     info: "Catedral, museo e historia",
-    cordX: -34.349416645270736, 
+    cordX: -34.349416645270736,
     cordY: -56.70849781341156,
   },
   {
     departamento: "Treinta y Tres",
-    id: 37,
+
     tipo: "ciudad",
     img: "38",
     nombre: "Treinta y Tres",
     costo: 500,
     info: "Naturaleza, río e historia",
     cordX: -33.22879146508683,
-    cordY:  -54.35893806027949,
+    cordY: -54.35893806027949,
   },
   {
     departamento: "Rocha",
-    id: 38,
+
     tipo: "ciudad",
     img: "39",
     nombre: "Aguas Dulces",
     costo: 500,
     info: "Playa",
-    cordX: -34.27936393711271, 
+    cordX: -34.27936393711271,
     cordY: -53.78702407299277,
   },
   {
     departamento: "Maldonado",
-    id: 39,
+
     tipo: "ciudad",
     img: "40",
     nombre: "Punta Colorada",
     costo: 500,
     info: "Playa y surf",
-    cordX: -34.89476134055786, 
+    cordX: -34.89476134055786,
     cordY: -55.25092012660722,
   },
   {
     departamento: "Artigas",
-    id: 40,
     tipo: "ciudad",
     img: "41",
     nombre: "Artigas",
     costo: 500,
     info: "Minería, monumento y naturaleza",
-    cordX: -30.406696659590015, 
+    cordX: -30.406696659590015,
     cordY: -56.47724265714417,
   },
   {
     departamento: "Rocha",
-    id: 41,
     tipo: "ciudad",
     img: "42",
     nombre: "Laguna de Rocha",
     costo: 500,
     info: "Área protegida, humedal y naturaleza",
-    cordX: -34.62326788211407, 
+    cordX: -34.62326788211407,
     cordY: -54.2925447543187,
   },
 ];
@@ -463,6 +452,8 @@ document.querySelector("#buscador").addEventListener("keyup", () => {
 });
 
 function cargarNombres(viajes) {
+  bubbleSort(viajes);
+
   document.querySelector("#viajes").innerHTML = "";
   viajes.map((elemento) => {
     document.querySelector("#viajes").innerHTML += `
@@ -511,3 +502,16 @@ function soyelMapa(viajes) {
   });
 }
 soyelMapa(viajes);
+
+//Ordenar Arrays de objetos metodo burbuja.
+function bubbleSort(a) {
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < a.length - i - 1; j++) {
+      if (a[j].departamento > a[j + 1].departamento) {
+        let tmp = a[j];
+        a[j] = a[j + 1];
+        a[j + 1] = tmp;
+      }
+    }
+  }
+}
