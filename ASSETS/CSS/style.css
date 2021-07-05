@@ -48,6 +48,18 @@ a {
   text-decoration: none;
   list-style: none; }
 
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2.8rem; }
+
+h3 {
+  font-size: 2rem; }
+
+h4, p {
+  font-size: 1.2rem; }
+
 .contenedor {
   margin: auto; }
   @media (max-width: 600px) {
@@ -234,8 +246,6 @@ p.blink {
 .cajaOpciones {
   display: flex;
   padding: 1rem;
-  background-color: var(--primario);
-  border-radius: 1rem;
   align-items: center;
   justify-content: space-between; }
   .cajaOpciones .imputBusqueda {
@@ -245,19 +255,21 @@ p.blink {
       .cajaOpciones .imputBusqueda input:first-of-type {
         width: 80%; }
       .cajaOpciones .imputBusqueda input:not(:first-of-type) {
-        width: 19%; }
+        width: 10%; }
   .cajaOpciones div {
     padding: .8rem; }
     .cajaOpciones div:not(:first-of-type) {
       width: 30%; }
   .cajaOpciones select {
     width: 49%; }
+    .cajaOpciones select span {
+      font-size: 0.8rem; }
 
 .cajaResultados {
   text-decoration: none; }
   .cajaResultados .resultadoBusqueda {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; }
+    grid-template-columns: repeat(4, 1fr); }
     .cajaResultados .resultadoBusqueda .opcionDestino {
       background-color: var(--primario);
       margin: 1rem;

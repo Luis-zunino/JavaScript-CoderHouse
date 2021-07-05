@@ -64,7 +64,13 @@ a {
     list-style: none;
 
 }
-
+h1{
+    font-size: 3rem;
+}
+h2
+{font-size: 2.8rem;}
+h3{font-size: 2rem;}
+h4,p{font-size: 1.2rem;}
 .contenedor {
     // width: 95%;
     margin: auto;
@@ -309,8 +315,6 @@ p.blink {
 .cajaOpciones {
     display: flex;
     padding: 1rem;
-    background-color: var(--primario);
-    border-radius: 1rem;
     align-items: center;
     justify-content: space-between;
 
@@ -325,7 +329,7 @@ p.blink {
             }
 
             &:not(:first-of-type) {
-                width: 19%;
+                width: 10%;
             }
         }
     }
@@ -340,6 +344,7 @@ p.blink {
 
     select {
         width: 49%;
+         span{ font-size: 0.8rem;}
     }
 }
 
@@ -349,7 +354,7 @@ p.blink {
 
     .resultadoBusqueda {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat( 4, 1fr);
 
         .opcionDestino {
             background-color: var(--primario);

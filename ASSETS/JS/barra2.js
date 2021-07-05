@@ -90,8 +90,8 @@ let agenda = [];
 
 /* Listeners */
 listaAgenda.addEventListener("click", agregarDestinoALaAgenda);
-tableCarrito.addEventListener("click", borrarProducto);
-btnVaciarCarrito.addEventListener("click", vaciarCarrito);
+//tableCarrito.addEventListener("click", borrarProducto);
+//btnVaciarCarrito.addEventListener("click", vaciarCarrito);
 document.addEventListener("DOMContentLoaded", () => {
   if (JSON.parse(localStorage.getItem("carrito"))) {
     agenda = JSON.parse(localStorage.getItem("carrito"));

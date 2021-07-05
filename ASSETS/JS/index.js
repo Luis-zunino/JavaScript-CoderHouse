@@ -26,7 +26,7 @@ let depa = document.getElementById("depa");
 //recorro todo el array
 
 for (let i = 0; i < depas.length; i++) {
-  depa.innerHTML += `<option id="${i}">${depas[i]}</option>`;
+  depa.innerHTML += `<option id="${i}"><span>${depas[i]}</span></option>`;
 }
 
 //sirve mas para objetos el for in
