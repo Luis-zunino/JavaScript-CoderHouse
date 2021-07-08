@@ -45,3 +45,9 @@ for (let i = 0; i < tipo.length; i++) {
   tipos.innerHTML += `<option id="${i}">${tipo[i]}</option>`;
 }
 
+//Menu laterla
+$(document).ready(function(){
+  $(".menu").click(function(){
+      $(".keep").toggleClass("width");
+  });
+});
