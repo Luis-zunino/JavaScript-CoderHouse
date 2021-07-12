@@ -176,17 +176,15 @@ p.blink {
     .cajaOpciones select span {
       font-size: 0.8rem; }
 
-.sectionMapa .cajaMapaInteractivo {
-  display: none; }
-  .sectionMapa .cajaMapaInteractivo .mapa {
-    position: relative;
-    width: 95%;
-    margin: auto;
-    height: 500px; }
-    .sectionMapa .cajaMapaInteractivo .mapa #map {
-      padding: 2rem;
-      width: 100%;
-      height: 100%; }
+.cajaMapaInteractivo .mapa {
+  position: relative;
+  width: 95%;
+  margin: auto;
+  height: 500px; }
+  .cajaMapaInteractivo .mapa #map {
+    padding: 2rem;
+    width: 100%;
+    height: 100%; }
 
 .cajaResultados {
   text-decoration: none; }
@@ -194,7 +192,7 @@ p.blink {
     display: grid;
     gap: 1rem;
     grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); }
+    grid-template-columns: repeat(auto-fill, minmax(Min(100%, 20rem), 1fr)); }
     .cajaResultados .resultadoBusqueda .opcionDestino {
       background-color: var(--primario);
       margin: 1rem;

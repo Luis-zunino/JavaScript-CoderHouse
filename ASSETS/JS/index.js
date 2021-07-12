@@ -46,28 +46,25 @@ for (let i = 0; i < tipo.length; i++) {
 }
 
 //Menu laterla
-$(document).ready(function(){
-  $(".menu").click(function(){
-      $(".keep").toggleClass("width");
+$(document).ready(function () {
+  $(".menu").click(function () {
+    $(".keep").toggleClass("width");
   });
 });
-
-
 cargarNombres(viajes);
+
 document.querySelector("#buscador").addEventListener("keyup", () => {
   const texto = document.querySelector("#buscador").value;
   const nombresFiltrados = viajes.filter((nombre) => {
     return nombre.nombre.toUpperCase().indexOf(texto.toUpperCase()) !== -1;
   });
   cargarNombres(nombresFiltrados);
-  soyelMapa(nombresFiltrados);
-  //console.log(nombresFiltrados);
+  cargarMapa(nombresFiltrados);
 });
 
 function cargarNombres(viajes) {
   bubbleSort(viajes);
-
-  document.querySelector("#viajes").innerHTML = "";
+  document.getElementById("viajes").innerHTML = "";
   viajes.map((elemento) => {
     document.querySelector("#viajes").innerHTML += `
     <li class="opcionDestino">
@@ -90,38 +87,7 @@ function cargarNombres(viajes) {
       <h3 class="loSentimos">Lo sentimos no hemos encontrado el destino que nos indicas</h3>`;
   }
 }
-let map = L.map("map").setView([-32.70693340531241, -55.98485369606557], 7);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  //attribution:
-  // '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(map);
-
-//L.marker([elemento.cordX, elemento.cordY]).addTo(map).bindPopup().openPopup();
-
-function soyelMapa(viajes) {
-  viajes.map((elemento) => {
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      //attribution:
-      // '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
-
-    L.marker([elemento.cordX, elemento.cordY])
-      .addTo(map)
-      .bindPopup(
-        `<img src="ASSETS/IMG/DESTINOS/unnamed(${elemento.img}).jpg">
-          <div> 
-            <h1>${elemento.nombre}</h1>
-            <span>
-                <p>Departamento: ${elemento.departamento}</p>
-                <p>${elemento.info}</p> 
-            </span>
-          </div>`
-      )
-      .openPopup();
-  });
-}
-//soyelMapa(viajes);
 
 //Ordenar Arrays de objetos metodo burbuja.
 function bubbleSort(a) {

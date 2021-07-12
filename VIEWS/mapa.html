@@ -20,8 +20,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!--CSS-->
-    <link rel="stylesheet" href="ASSETS/CSS/style.css">
-    <link rel="stylesheet" href="ASSETS/CSS/leaflet.extra-markers.min.css">
+    <link rel="stylesheet" href="../ASSETS/CSS/style.css">
+    <link rel="stylesheet" href="../ASSETS/CSS/leaflet.extra-markers.min.css">
 
 </head>
 
@@ -33,14 +33,14 @@
         <aside class="keep">
             <ul>
                 <li>
-                    <a href="index.html">
+                    <a href="../index.html">
                         <span><i class="material-icons">stay_current_portrait</i></span>
                         Destinos
                         <span class="notif yellow">2</span>
                     </a>
                 </li>
                 <li>
-                    <a href="VIEWS/mapa.html">
+                    <a href="mapa.html">
                         <span><i class="material-icons">location_on</i></span>
                         Mapa
                         <span class="notif red">1</span>
@@ -110,31 +110,26 @@
                             </select>
                         </div>
                     </div>
+                         <!--RESULTADOS DE LOS DISTINTOS DESTINOS-->
 
-                    <!--RESULTADOS DE LOS DISTINTOS DESTINOS-->
-
-                    <div class="cajaResultados">
-                        <ul id="viajes" class="resultadoBusqueda">
-                        </ul>
-                    </div>
-
-                    <!--FIN RESULTADOS DE LOS DISTINTOS DESTINOS-->
-
-                </section>
-
-
-
-                <!-- Esta oculto por css -->
-                <section class="sectionMapa">
-                    <div class="cajaMapaInteractivo">
-                        <!--MAPA-->
-
-                        <div class="mapa">
-                            <div id="map"></div>
+                         <div class="cajaResultados">
+                            <ul id="viajes" class="resultadoBusqueda">
+                            </ul>
                         </div>
-                    </div>
-                </section>
+    
+                        <!--FIN RESULTADOS DE LOS DISTINTOS DESTINOS-->
+                        <div class="cajaMapaInteractivo">
+                            <!--MAPA-->
 
+                            <div class="mapa">
+                                <div id="map">
+
+                                </div>
+                            </div>
+                        </div>
+                  
+
+                </section>
         </article>
     </section>
 
@@ -148,12 +143,11 @@
         </script>
     <!--MAPA-->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="ASSETS/JS/materiales/leaflet.extra-markers.min.js"></script>
+    <script src="../ASSETS/JS/materiales/leaflet.extra-markers.min.js"></script>
     <!--PROPIOS-->
-    <script src="ASSETS/JS/materiales/jquery-3.6.0.min.js"></script>
-    <script src="ASSETS/JS/arraydeviajes.js"></script>
-    <script src="ASSETS/JS/index.js"></script>
-
+    <script src="../ASSETS/JS/materiales/jquery-3.6.0.min.js"></script>
+    <script src="../ASSETS/JS/arraydeviajes.js"></script>
+    <script src="../ASSETS/JS/mapa.js"></script>
 </body>
 
 </html>
