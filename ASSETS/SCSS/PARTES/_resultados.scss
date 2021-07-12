@@ -1,0 +1,40 @@
+//Restulados de la busqueda
+
+.cajaResultados {
+    text-decoration: none;
+
+    .resultadoBusqueda {
+        display: grid;
+        gap: 1rem;
+        grid-auto-rows: 22rem;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+
+        .opcionDestino {
+            background-color: var(--primario);
+            margin: 1rem;
+            border-radius: 1rem;
+
+            h1:hover {
+                color: var(--terciario);
+            }
+
+            img {
+                width: 100%;
+            }
+
+            div {
+                padding: 1rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .loSentimos {
+        grid-column: 1/4;
+        font-size: 4rem;
+        text-align: center;
+        padding: 1rem;
+        margin: 4rem 0;
+    }
+}
+

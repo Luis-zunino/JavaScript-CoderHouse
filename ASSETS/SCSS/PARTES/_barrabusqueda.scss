@@ -1,0 +1,40 @@
+
+//barra de busqueda con el filtro de departamento y tipo de sitio
+.cajaOpciones {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .imputBusqueda {
+        width: 70%;
+
+        input {
+            height: 3rem;
+
+            &:first-of-type {
+                width: 80%;
+            }
+
+            &:not(:first-of-type) {
+                width: 10%;
+            }
+        }
+    }
+
+    div {
+        padding: .8rem;
+
+        &:not(:first-of-type) {
+            width: 30%;
+        }
+    }
+
+    select {
+        width: 49%;
+
+        span {
+            font-size: 0.8rem;
+        }
+    }
+}
