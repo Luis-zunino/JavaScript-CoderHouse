@@ -70,14 +70,14 @@ function cargarNombres(viajes) {
     <li class="opcionDestino">
       <img src="ASSETS/IMG/DESTINOS/unnamed(${elemento.img}).jpg">
       <div> 
-        <h1>${elemento.nombre}</h1>
+        <h3>${elemento.nombre}</h3>
         <span class="contViaje">
-            <p>Departamento: ${elemento.departamento}</p>
-            <p>${elemento.info}</p> 
+            <h4>Departamento: ${elemento.departamento}</h4>
+            <h4>${elemento.info}</h4> 
         </span>
       </div>
-      <p class="agendar">Agregar a la agenda</p>
-      <p>Ver en el Mapa</p>
+      <a href="VIEWS/mapa.html" id="${elemento.id}" class="agendar"><i class="far fa-calendar-check"></i><i class="far fa-calendar-times"></i></a>
+      <p><i class="fas fa-map-marked-alt"></i></p>
 
     </li>
   `;
@@ -87,7 +87,6 @@ function cargarNombres(viajes) {
       <h3 class="loSentimos">Lo sentimos no hemos encontrado el destino que nos indicas</h3>`;
   }
 }
-
 
 //Ordenar Arrays de objetos metodo burbuja.
 function bubbleSort(a) {
@@ -105,30 +104,30 @@ function bubbleSort(a) {
 //clase profe=========================================================
 /* Selectores */
 const listaAgenda = document.querySelector("#viajes");
-const tableagenda = document.querySelector("#lista-carrito tbody");
-const btnVaciarCarrito = document.querySelector("#vaciar-carrito");
+const tablagenda = document.querySelector(".green");
+const btnVaciaragenda = document.querySelector("#vaciar-agenda");
 let agenda = [];
 
 /* Listeners */
 listaAgenda.addEventListener("click", agregarDestinoALaAgenda);
-//tableCarrito.addEventListener("click", borrarProducto);
-//btnVaciarCarrito.addEventListener("click", vaciarCarrito);
+//tableagenda.addEventListener("click", borrarProducto);
+//btnVaciaragenda.addEventListener("click", vaciaragenda);
 document.addEventListener("DOMContentLoaded", () => {
-  if (JSON.parse(localStorage.getItem("carrito"))) {
-    agenda = JSON.parse(localStorage.getItem("carrito"));
-    insertarCarritoHTML();
+  if (JSON.parse(localStorage.getItem("agenda"))) {
+    agenda = JSON.parse(localStorage.getItem("agenda"));
+    insertaragendaHTML();
   }
 });
 
-function vaciarCarrito() {
+function vaciaragenda() {
   agenda = [];
-  insertarCarritoHTML();
+  insertaragendaHTML();
 }
 
 function borrarProducto(e) {
   e.preventDefault();
 
-  if (e.target.classList.contains("borrar-producto")) {
+  if (e.target.classList.contains("borrar-destino")) {
     /* Opcion 1 */
     // const productoSeleccionado = e.target.parentElement.parentElement;
     // const productoId = e.target.getAttribute('data-id');
@@ -137,98 +136,85 @@ function borrarProducto(e) {
     // productoSeleccionado.remove();
 
     // /* Borrar de la variable agenda*/
-    // agenda= carrito.filter(producto => producto.id !== productoId);
+    // agenda= agenda.filter(producto => producto.id !== productoId);
 
     // /* Actualizar el storage */
-    // guardarCarritoStorage();
+    // guardaragendaStorage();
 
     /* Opcion 2 */
     const productoId = e.target.getAttribute("data-id");
-    agenda = carrito.filter((producto) => producto.id !== productoId);
-    insertarCarritoHTML();
+    agenda = agenda.filter((producto) => producto.id !== productoId);
+    insertaragendaHTML();
   }
 }
 
 function agregarDestinoALaAgenda(e) {
   e.preventDefault();
-
   if (e.target.classList.contains("agendar")) {
-    const cardDestino = e.target.parentElement.parentElement;
+    const cardDestino = e.target.parentElement;
 
-    obtenerDatosProducto(cardDestino);
+    obtenerDatosDestino(cardDestino);
   }
 }
 
-function obtenerDatosProducto(cardDestino) {
-  const productoAgregado = {
+function obtenerDatosDestino(cardDestino) {
+  const destinoAgregado = {
     imagen: cardDestino.querySelector("img").src,
-    nombre: cardDestino.querySelector("h4").textContent,
-    precio: cardDestino.querySelector(".precio span").textContent,
+    nombre: cardDestino.querySelector("h1").textContent,
+    departamento: cardDestino.querySelector("h3").textContent,
+    info: cardDestino.querySelector("h4").textContent,
     cantidad: 1,
-    id: cardDestino.querySelector("a").getAttribute("data-id"),
+    id: cardDestino.querySelector("a").getAttribute("id"),
   };
 
-  const existe = carrito.some(
-    (producto) => producto.id === productoAgregado.id
-  );
+  const existe = agenda.some((producto) => producto.id === destinoAgregado.id);
+  console.log(existe);
 
   if (existe) {
-    const productos = carrito.map((producto) => {
-      if (producto.id === productoAgregado.id) {
-        producto.cantidad++;
-        producto.precio = `$${
-          Number(productoAgregado.precio.slice(1)) * producto.cantidad
-        }`;
+    const productos = agenda.map((producto) => {
+      if (producto.id === destinoAgregado.id) {
         // return producto;
+        console.log("destino ya agregado");
       } else {
         // return producto;
+        producto.cantidad++;
       }
       return producto;
     });
     /* Spread operator */
     agenda = [...productos];
   } else {
-    // carrito.push(productoAgregado);
-    agenda = [...carrito, productoAgregado];
+    // agenda.push(destinoAgregado);
+    agenda = [...agenda, destinoAgregado];
   }
 
-  insertarCarritoHTML();
+  insertaragendaHTML();
 }
 
-function insertarCarritoHTML() {
-  borrarCarritoHTML();
+// function insertaragendaHTML() {
+//   // borraragendaHTML();
 
-  carrito.forEach((producto) => {
-    /* Destructuring de objetos */
-    const { imagen, nombre, precio, cantidad, id } = producto;
+//   agenda.forEach((producto) => {
+//     document.getElementById("agendados").innerHTML = "";
+//     /* Destructuring de objetos */
+//     const { imagen, nombre, cantidad, id } = producto;
+//     //==================================================
+  
+//     document.querySelector("#agendados").innerHTML += `
+//       <li class="opcionDestino">
+//         <img src="ASSETS/IMG/DESTINOS/unnamed(${producto.img}).jpg">
+//         <div> 
+//           <h1>${producto.nombre}</h1>
+//           <span class="contViaje">
+//               <h3>Departamento: ${producto.departamento}</h3>
+//               <h4>${producto.info}</h4> 
+//           </span>
+//         </div>
+//         <a href="VIEWS/mapa.html" id="${producto.id}" class="agendar">Agregar a la agenda</a>
+//         <p>Ver en el Mapa</p>
+  
+//       </li>
+//     `;
+//   });
 
-    const row = document.createElement("tr");
-    row.innerHTML = `
-		<td>
-			<img src="${imagen}" width='100%'>
-		</td>
-		<td>${nombre}</td>
-		<td>${precio}</td>
-		<td>${cantidad}</td>
-		<td>
-			<a href="#" class="borrar-producto" data-id="${id}">X</a>
-		</td>
-		`;
-    tableCarrito.appendChild(row);
-  });
-  guardarCarritoStorage();
-}
-
-function borrarCarritoHTML() {
-  /* Forma "lenta" */
-  // tableCarrito.innerHTML = '';
-
-  /* Forma rapida */
-  while (tableCarrito.firstChild) {
-    tableCarrito.removeChild(tableCarrito.firstChild);
-  }
-}
-
-function guardarCarritoStorage() {
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-}
+// }

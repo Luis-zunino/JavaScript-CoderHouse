@@ -1,4 +1,11 @@
+//menu lateral
+$(document).ready(function () {
+  $(".menu").click(function () {
+    $(".keep").toggleClass("width");
+  });
+});
 
+//mapa
 let map = L.map("map").setView([-32.70693340531241, -55.98485369606557], 7);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {}).addTo(
   map
