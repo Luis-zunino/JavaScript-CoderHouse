@@ -191,18 +191,17 @@ p.blink {
   .cajaResultados .resultadoBusqueda {
     display: grid;
     gap: 1rem;
-    grid-auto-rows: 22rem;
     grid-template-columns: repeat(auto-fill, minmax(Min(100%, 20rem), 1fr)); }
     .cajaResultados .resultadoBusqueda .opcionDestino {
       background-color: var(--primario);
       margin: 1rem;
       border-radius: 1rem; }
-      .cajaResultados .resultadoBusqueda .opcionDestino h1:hover {
+      .cajaResultados .resultadoBusqueda .opcionDestino h3:hover {
         color: var(--terciario); }
       .cajaResultados .resultadoBusqueda .opcionDestino img {
         width: 100%; }
       .cajaResultados .resultadoBusqueda .opcionDestino div {
-        padding: 1rem;
+        padding: 0.5rem;
         text-align: center; }
   .cajaResultados .loSentimos {
     grid-column: 1/4;

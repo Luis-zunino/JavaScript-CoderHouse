@@ -6,7 +6,6 @@
     .resultadoBusqueda {
         display: grid;
         gap: 1rem;
-        grid-auto-rows: 22rem;
         grid-template-columns: repeat(auto-fill, minmax(Min(100%, 20rem), 1fr));
 
         .opcionDestino {
@@ -14,7 +13,7 @@
             margin: 1rem;
             border-radius: 1rem;
 
-            h1:hover {
+            h3:hover {
                 color: var(--terciario);
             }
 
@@ -23,7 +22,7 @@
             }
 
             div {
-                padding: 1rem;
+                padding: 0.5rem;
                 text-align: center;
             }
         }
