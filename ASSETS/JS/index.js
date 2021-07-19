@@ -51,6 +51,20 @@ $(document).ready(function () {
     $(".keep").toggleClass("width");
   });
 });
+
+
+//AJAX
+$.ajax({
+  url: "ASSETS/JS/arraydeviajes.json",
+  method: "GET",
+  dataType: "JSON",
+  success: function (result, status, jqXHR) {
+    cargarNombres(result);
+  },
+  error: function (jqXHR, status, error) {
+    
+  }
+});
 cargarNombres(viajes);
 
 document.querySelector("#buscador").addEventListener("keyup", () => {
@@ -191,30 +205,4 @@ function obtenerDatosDestino(cardDestino) {
   insertaragendaHTML();
 }
 
-// function insertaragendaHTML() {
-//   // borraragendaHTML();
 
-//   agenda.forEach((producto) => {
-//     document.getElementById("agendados").innerHTML = "";
-//     /* Destructuring de objetos */
-//     const { imagen, nombre, cantidad, id } = producto;
-//     //==================================================
-  
-//     document.querySelector("#agendados").innerHTML += `
-//       <li class="opcionDestino">
-//         <img src="ASSETS/IMG/DESTINOS/unnamed(${producto.img}).jpg">
-//         <div> 
-//           <h1>${producto.nombre}</h1>
-//           <span class="contViaje">
-//               <h3>Departamento: ${producto.departamento}</h3>
-//               <h4>${producto.info}</h4> 
-//           </span>
-//         </div>
-//         <a href="VIEWS/mapa.html" id="${producto.id}" class="agendar">Agregar a la agenda</a>
-//         <p>Ver en el Mapa</p>
-  
-//       </li>
-//     `;
-//   });
-
-// }
