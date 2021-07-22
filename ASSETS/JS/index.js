@@ -1,4 +1,4 @@
-//Listar Departamentos
+/*Listar Departamentos*/
 let depas = [
   "--Departamento--",
   "Artigas",
@@ -21,17 +21,14 @@ let depas = [
   "Tacuarembo",
   "Treinta y Tres",
 ];
-//eligo donde lo voy a imprimir
+/*eligo donde lo voy a imprimir*/
 let depa = document.getElementById("depa");
-//recorro todo el array
 
 for (let i = 0; i < depas.length; i++) {
   depa.innerHTML += `<option id="${i}"><span>${depas[i]}</span></option>`;
 }
 
-//sirve mas para objetos el for in
-
-//Tipos de lugares
+/*Tipos de lugares*/
 let tipo = [
   "--Elige una opción--",
   "Espacios Verdes",
@@ -52,6 +49,16 @@ $(document).ready(function () {
   });
 });
 
+document.querySelector("#buscador").addEventListener("keyup", buscador);
+function buscador(a) {
+  const texto = document.querySelector("#buscador").value;
+  const nombresFiltrados = a.filter((nombre) => {
+    return nombre.nombre.toUpperCase().indexOf(texto.toUpperCase()) !== -1;
+  });
+  console.log(nombresFiltrados);
+  //cargarCardViajes(nombresFiltrados);
+  //cargarMapa(nombresFiltrados);
+}
 
 //AJAX
 $.ajax({
@@ -59,24 +66,12 @@ $.ajax({
   method: "GET",
   dataType: "JSON",
   success: function (result, status, jqXHR) {
-    cargarNombres(result);
+    cargarCardViajes(result);
   },
-  error: function (jqXHR, status, error) {
-    
-  }
-});
-cargarNombres(viajes);
-
-document.querySelector("#buscador").addEventListener("keyup", () => {
-  const texto = document.querySelector("#buscador").value;
-  const nombresFiltrados = viajes.filter((nombre) => {
-    return nombre.nombre.toUpperCase().indexOf(texto.toUpperCase()) !== -1;
-  });
-  cargarNombres(nombresFiltrados);
-  cargarMapa(nombresFiltrados);
+  error: function (jqXHR, status, error) {},
 });
 
-function cargarNombres(viajes) {
+function cargarCardViajes(viajes) {
   bubbleSort(viajes);
   document.getElementById("viajes").innerHTML = "";
   viajes.map((elemento) => {
@@ -114,95 +109,3 @@ function bubbleSort(a) {
     }
   }
 }
-
-//clase profe=========================================================
-/* Selectores */
-const listaAgenda = document.querySelector("#viajes");
-const tablagenda = document.querySelector(".green");
-const btnVaciaragenda = document.querySelector("#vaciar-agenda");
-let agenda = [];
-
-/* Listeners */
-listaAgenda.addEventListener("click", agregarDestinoALaAgenda);
-//tableagenda.addEventListener("click", borrarProducto);
-//btnVaciaragenda.addEventListener("click", vaciaragenda);
-document.addEventListener("DOMContentLoaded", () => {
-  if (JSON.parse(localStorage.getItem("agenda"))) {
-    agenda = JSON.parse(localStorage.getItem("agenda"));
-    insertaragendaHTML();
-  }
-});
-
-function vaciaragenda() {
-  agenda = [];
-  insertaragendaHTML();
-}
-
-function borrarProducto(e) {
-  e.preventDefault();
-
-  if (e.target.classList.contains("borrar-destino")) {
-    /* Opcion 1 */
-    // const productoSeleccionado = e.target.parentElement.parentElement;
-    // const productoId = e.target.getAttribute('data-id');
-
-    // /* Borrar del HTML */
-    // productoSeleccionado.remove();
-
-    // /* Borrar de la variable agenda*/
-    // agenda= agenda.filter(producto => producto.id !== productoId);
-
-    // /* Actualizar el storage */
-    // guardaragendaStorage();
-
-    /* Opcion 2 */
-    const productoId = e.target.getAttribute("data-id");
-    agenda = agenda.filter((producto) => producto.id !== productoId);
-    insertaragendaHTML();
-  }
-}
-
-function agregarDestinoALaAgenda(e) {
-  e.preventDefault();
-  if (e.target.classList.contains("agendar")) {
-    const cardDestino = e.target.parentElement;
-
-    obtenerDatosDestino(cardDestino);
-  }
-}
-
-function obtenerDatosDestino(cardDestino) {
-  const destinoAgregado = {
-    imagen: cardDestino.querySelector("img").src,
-    nombre: cardDestino.querySelector("h1").textContent,
-    departamento: cardDestino.querySelector("h3").textContent,
-    info: cardDestino.querySelector("h4").textContent,
-    cantidad: 1,
-    id: cardDestino.querySelector("a").getAttribute("id"),
-  };
-
-  const existe = agenda.some((producto) => producto.id === destinoAgregado.id);
-  console.log(existe);
-
-  if (existe) {
-    const productos = agenda.map((producto) => {
-      if (producto.id === destinoAgregado.id) {
-        // return producto;
-        console.log("destino ya agregado");
-      } else {
-        // return producto;
-        producto.cantidad++;
-      }
-      return producto;
-    });
-    /* Spread operator */
-    agenda = [...productos];
-  } else {
-    // agenda.push(destinoAgregado);
-    agenda = [...agenda, destinoAgregado];
-  }
-
-  insertaragendaHTML();
-}
-
-
