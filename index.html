@@ -36,52 +36,17 @@
                     </a>
                 </li>
                 <li>
-                    <a href="VIEWS/mapa.html">
+                    <a href="/">
                         <span><i class="material-icons">location_on</i></span>
                         Mapa
                         <span class="notif red">1</span>
                     </a>
                 </li>
                 <li>
-                    <a href="VIEWS/agenda.html">
+                    <a href="/">
                         <span><i class="material-icons">import_contacts</i></span>
                         Agenda
                         <span class="notif green"><span id="contadorAgenda"></span> </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <span><i class="material-icons">local_offer</i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <span><i class="material-icons">photo</i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <span><i class="material-icons">event</i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <span><i class="material-icons">event</i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <span><i class="material-icons">restaurant_menu</i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <span><i class="material-icons">textsms</i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <span><i class="material-icons">receipt</i></span>
                     </a>
                 </li>
             </ul>
@@ -96,7 +61,6 @@
                             <input type="text" id="buscador" placeholder="¿Qué lugar deseas visitar?">
                             <input type="button" id="botonBuscador" value="Buscar">
                         </div>
-                        <!-- FIN BARRA DE BUSQUEDA DE DESTINOS Y LUGARES-->
                         <div>
                             <select id="depa">
                                 <!--Listar Departamentos-->
@@ -109,45 +73,34 @@
 
                     <!--RESULTADOS DE LOS DISTINTOS DESTINOS-->
 
-                    <div class="cajaResultados">
+                    <div class="cajaResultados secciones">
                         <ul id="viajes" class="resultadoBusqueda">
                         </ul>
                     </div>
 
-                    <!--FIN RESULTADOS DE LOS DISTINTOS DESTINOS-->
-
-                </section>
-
-
-
-                <!-- Esta oculto por css -->
-                <section class="sectionMapa">
-                    <div class="cajaMapaInteractivo">
-                        <!--MAPA-->
-
+                    <!--MAPA-->
+                    <div class="cajaMapaInteractivo secciones">
                         <div class="mapa">
-                            <div id="map"></div>
+                            <div id="map">
+                            </div>
                         </div>
                     </div>
-                </section>
+                    <!-- AGENDA -->
+                    <div id="agendados" class="secciones">
+                        <h1>hola
 
+                        </h1>
+                    </div>
+                </section>
         </article>
     </section>
 
     <!--SCRIPTS-->
-    <!--ACORDIONES-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
     <!--MAPA-->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="ASSETS/JS/materiales/leaflet.extra-markers.min.js"></script>
     <!--PROPIOS-->
     <script src="ASSETS/JS/materiales/jquery-3.6.0.min.js"></script>
-    <!-- <script src="ASSETS/JS/arraydeviajes.js"></script> -->
     <script src="ASSETS/JS/index.js"></script>
 
 </body>
