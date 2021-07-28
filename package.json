@@ -8,7 +8,6 @@
     "build-css": "node-sass --include-path scss ASSETS/SCSS/style.scss ASSETS/CSS/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Luis-zunino/JavaScript-CoderHouse.git"
@@ -20,7 +19,7 @@
   },
   "homepage": "https://github.com/Luis-zunino/JavaScript-CoderHouse#readme",
   "devDependencies": {
-    "node-sass": "^6.0.0",
-    "nodemon": "^2.0.7"
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
   }
 }
