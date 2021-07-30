@@ -49,25 +49,34 @@ $(document).ready(function () {
   });
 });
 
-document.querySelector("#buscador").addEventListener("keyup", buscador);
-function buscador(a) {
-  const texto = document.querySelector("#buscador").value;
-  const nombresFiltrados = a.filter((nombre) => {
-    return nombre.nombre.toUpperCase().indexOf(texto.toUpperCase()) !== -1;
-  });
-  console.log(nombresFiltrados);
-}
-
 //AJAX
 $.ajax({
   url: "ASSETS/JS/arraydeviajes.json",
   method: "GET",
   dataType: "JSON",
   success: function (result, status, jqXHR) {
+    //console.log("1111", result);
+
     cargarCardViajes(result);
+    buscador(result);
+    
   },
   error: function (jqXHR, status, error) {},
 });
+
+document.querySelector("#buscador").addEventListener("keyup", () => {
+  buscador(a);
+});
+
+function buscador(a) {
+  const texto = document.querySelector("#buscador").value;
+
+  console.log("2222", a);
+
+  const nombresFiltrados = a.filter((nombre) => {
+    return nombre.nombre.toUpperCase().indexOf(texto.toUpperCase()) !== -1;
+  });
+}
 
 function cargarCardViajes(viajes) {
   bubbleSort(viajes);
@@ -114,7 +123,7 @@ function bubbleSort(a) {
 //menu lateral
 $(document).ready(function () {
   $(".menu").click(function () {
-    $(".keep").toggleClass("width");
+    $(".keep").toggleClass(".width");
   });
 });
 
