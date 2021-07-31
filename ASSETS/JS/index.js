@@ -62,7 +62,7 @@ $.ajax({
   },
   error: function (jqXHR, status, error) {},
 });
-console.log(viajes);
+
 document.querySelector("#buscador").addEventListener("keyup", buscador);
 
 function buscador() {
@@ -116,18 +116,9 @@ function bubbleSort(a) {
   }
 }
 
-//menu lateral
-$(document).ready(function () {
-  $(".menu").click(function () {
-    $(".keep").toggleClass(".width");
-  });
-});
-
 //mapa
 let map = L.map("map").setView([-32.70693340531241, -55.98485369606557], 7);
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {}).addTo(
-  map
-);
+
 //L.marker([elemento.cordX, elemento.cordY]).addTo(map).bindPopup().openPopup();
 
 function cargarMapa(viajes) {
@@ -150,15 +141,41 @@ function cargarMapa(viajes) {
       .openPopup();
   });
 }
-//cargarMapa(viajes)
+cargarMapa(viajes)
 
-// $(document).on("click", ".secciones", mostrarHTML);
-// document.getElementsByClassName("yellow");
-// document.getElementsByClassName("red");
-// document.getElementsByClassName("green");
+//Simulacion de HTMLs
+document.getElementById("aside").addEventListener("click", (e) => {
+  let listaDestinos = $(".cajaResultados");
+  let mapa = $(".cajaMapaInteractivo");
+  let agenda = $("#agendados");
+  let r = e.target.classList;
+  if (r.contains("amarillo") || r.contains("yellow")) {
 
-// function mostrarHTML(e) {
-//   console.log(e.value.classlist);
-//   console.log("hice click");
-// }
-// //mostrarHTML();
+    removerClases();
+    listaDestinos.addClass("mostrar");
+    mapa.addClass("ocultar");
+    agenda.addClass("ocultar");
+
+  } else if (r.contains("rojo") || r.contains("red")) {
+
+    removerClases();
+
+    listaDestinos.addClass("ocultar");
+    mapa.addClass("mostrar");
+    agenda.addClass("ocultar");
+    
+  } else if (r.contains("verde") || r.contains("green")) {
+    removerClases();
+
+    listaDestinos.addClass("ocultar");
+    mapa.addClass("ocultar");
+    agenda.addClass("mostrar");
+
+  }
+
+  function removerClases() {
+    listaDestinos.removeClass("mostrar");
+    mapa.removeClass("mostrar");
+    agenda.removeClass("mostrar");
+  }
+});
