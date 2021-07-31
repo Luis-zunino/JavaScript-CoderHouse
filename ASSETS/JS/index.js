@@ -49,33 +49,29 @@ $(document).ready(function () {
   });
 });
 
+let viajes = [];
+
 //AJAX
 $.ajax({
   url: "ASSETS/JS/arraydeviajes.json",
   method: "GET",
   dataType: "JSON",
   success: function (result, status, jqXHR) {
-    //console.log("1111", result);
-
-    cargarCardViajes(result);
-    buscador(result);
-    
+    viajes = result;
+    cargarCardViajes(viajes);
   },
   error: function (jqXHR, status, error) {},
 });
+console.log(viajes);
+document.querySelector("#buscador").addEventListener("keyup", buscador);
 
-document.querySelector("#buscador").addEventListener("keyup", () => {
-  buscador(a);
-});
-
-function buscador(a) {
+function buscador() {
   const texto = document.querySelector("#buscador").value;
 
-  console.log("2222", a);
-
-  const nombresFiltrados = a.filter((nombre) => {
-    return nombre.nombre.toUpperCase().indexOf(texto.toUpperCase()) !== -1;
+  const nombresFiltrados = viajes.filter((viaje) => {
+    return viaje.nombre.toUpperCase().indexOf(texto.toUpperCase()) !== -1;
   });
+  cargarCardViajes(nombresFiltrados);
 }
 
 function cargarCardViajes(viajes) {
@@ -156,13 +152,13 @@ function cargarMapa(viajes) {
 }
 //cargarMapa(viajes)
 
-$(document).on("click", ".secciones", mostrarHTML);
-document.getElementsByClassName("yellow");
-document.getElementsByClassName("red");
-document.getElementsByClassName("green");
+// $(document).on("click", ".secciones", mostrarHTML);
+// document.getElementsByClassName("yellow");
+// document.getElementsByClassName("red");
+// document.getElementsByClassName("green");
 
-function mostrarHTML(e) {
-  console.log(e.value.classlist);
-  console.log("hice click");
-}
-//mostrarHTML();
+// function mostrarHTML(e) {
+//   console.log(e.value.classlist);
+//   console.log("hice click");
+// }
+// //mostrarHTML();
