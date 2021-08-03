@@ -9,9 +9,10 @@
         grid-template-columns: repeat(auto-fill, minmax(Min(100%, 20rem), 1fr));
 
         .opcionDestino {
-            background-color: var(--primario);
+            //background-color: var(--primario);
             margin: 1rem;
             border-radius: 1rem;
+            padding: 0.8rem;
 
             h3:hover {
                 color: var(--terciario);

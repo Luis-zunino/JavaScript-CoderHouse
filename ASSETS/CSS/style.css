@@ -184,7 +184,8 @@ p.blink {
   .cajaMapaInteractivo .mapa #map {
     padding: 2rem;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: 1; }
 
 .cajaResultados {
   text-decoration: none; }
@@ -193,9 +194,9 @@ p.blink {
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(Min(100%, 20rem), 1fr)); }
     .cajaResultados .resultadoBusqueda .opcionDestino {
-      background-color: var(--primario);
       margin: 1rem;
-      border-radius: 1rem; }
+      border-radius: 1rem;
+      padding: 0.8rem; }
       .cajaResultados .resultadoBusqueda .opcionDestino h3:hover {
         color: var(--terciario); }
       .cajaResultados .resultadoBusqueda .opcionDestino img {
