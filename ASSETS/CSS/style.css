@@ -192,11 +192,12 @@ p.blink {
   .cajaResultados .resultadoBusqueda {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(Min(100%, 20rem), 1fr)); }
+    grid-template-columns: repeat(auto-fill, minmax(Min(100%, 20rem), 1fr));
+    padding: 0.8rem;
+    margin: 1rem; }
     .cajaResultados .resultadoBusqueda .opcionDestino {
-      margin: 1rem;
       border-radius: 1rem;
-      padding: 0.8rem; }
+      position: relative; }
       .cajaResultados .resultadoBusqueda .opcionDestino h3:hover {
         color: var(--terciario); }
       .cajaResultados .resultadoBusqueda .opcionDestino img {
@@ -204,6 +205,22 @@ p.blink {
       .cajaResultados .resultadoBusqueda .opcionDestino div {
         padding: 0.5rem;
         text-align: center; }
+      .cajaResultados .resultadoBusqueda .opcionDestino .fa-map-marked-alt {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem; }
+        .cajaResultados .resultadoBusqueda .opcionDestino .fa-map-marked-alt:hover {
+          font-size: 2rem;
+          color: red; }
+      .cajaResultados .resultadoBusqueda .opcionDestino .far {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1.5rem; }
+        .cajaResultados .resultadoBusqueda .opcionDestino .far:hover {
+          font-size: 2rem;
+          color: green; }
   .cajaResultados .loSentimos {
     grid-column: 1/4;
     font-size: 4rem;
