@@ -114,6 +114,27 @@ function cargarCardViajes(viajes) {
     document.querySelector("#viajes").innerHTML += `
     <li class="opcionDestino">
       <img src="ASSETS/IMG/DESTINOS/unnamed(${elemento.img}).jpg">
+      <div class="btnCaja">
+      <div class="navBtn listaBtnExpan">
+          <p class="botones enlaceLista"><i class="fas fa-search-plus"></i></p>
+          <ul class="cajaListaInterna">
+              <li class="agendar listaInterna">
+                  <p class="botones enlaceLista">
+                      <i class="far fa-calendar-check"></i>
+                  </p>
+              </li>
+              <li class="listaInterna">
+                  <p class="botones enlaceLista">
+                      <i class="far fa-calendar-times"></i>
+                  </p>
+              </li>
+              <li class="listaInterna">
+                  <p class="botones enlaceLista"><i class="fas fa-map-marked-alt"></i>
+                  </p>
+              </li>
+          </ul>
+      </div>
+ </div>
       <div> 
         <h3>${elemento.nombre}</h3>
         <span class="contViaje">
@@ -121,10 +142,8 @@ function cargarCardViajes(viajes) {
             <h4>${elemento.info}</h4> 
         </span>
       </div>
-      <a class="agendar"><i  class="far fa-calendar-check"></i><i class="far fa-calendar-times"></i></a>
-      <a><i class="fas fa-map-marked-alt"></i></a>
-      <a id="${elemento.id}">Expandir</a>
 
+      <a id="${elemento.id}" class="boton">Expandir<i class="fas fa-info-circle"></i></a>
     </li>
   `;
   });
@@ -188,21 +207,17 @@ function creadorIndividuales(e) {
 
     document.getElementById("viajes").innerHTML = `
   <li>
-      
-      <img src="ASSETS/IMG/DESTINOS/unnamed(${id}).jpg">
+    <h3>${h3}</h3>
+    <img src="ASSETS/IMG/DESTINOS/unnamed(${id}).jpg">
       <div> 
-        <h3>${h3}</h3>
         <span class="contViaje">
           <h4>${departamento}</h4>
           <h4>${info}</h4> 
         </span>
       </div>
-      <a class="agendar"><i class="far fa-calendar-check"></i><i class="far fa-calendar-times"></i></a>
-      <a><i class="fas fa-map-marked-alt"></i></a>
   </li>
   `;
   }
-
 }
 
 document.getElementById("volver").addEventListener("click", volverResultados);
