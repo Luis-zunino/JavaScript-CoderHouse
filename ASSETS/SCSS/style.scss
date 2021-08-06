@@ -71,7 +71,7 @@ ul {
 
 a {
     text-decoration: none;
-    list-style: none;
+    // list-style: none;
 
 }
 
@@ -96,9 +96,23 @@ p {
     margin: auto;
 }
 
-.ocultar{
+.ocultar {
     display: none;
 }
-.mostrar{
+
+.mostrar {
     display: block;
+}
+
+.boton {
+    background-color: var(--secundario);
+    padding: .8rem;
+    border-radius: .8rem;
+    font-size: 1rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--terciario);
+
+    }
 }

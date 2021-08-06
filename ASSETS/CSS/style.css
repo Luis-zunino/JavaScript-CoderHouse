@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   background: #fff;
   padding: 10px 20px;
@@ -101,7 +102,7 @@ header {
 
 article {
   width: 92%;
-  height: 100vh;
+  height: 100%;
   margin-left: 7%;
   border-radius: 5px;
   box-shadow: 0px 2px 7px #6d6d6d; }
@@ -154,6 +155,70 @@ p.blink {
       top: 248px;
       left: 360px; }
 
+/*--------------Iconos de cada Viaje-------------- */
+.btnCaja {
+  text-align: center;
+  display: block;
+  height: max-content;
+  list-style: none;
+  position: relative;
+  padding: .8rem; }
+  .btnCaja .navBtn {
+    /*Ancho de los botones  */
+    display: flex;
+    width: 15%;
+    padding: 0.5rem;
+    height: 100%;
+    text-align: center; }
+    .btnCaja .navBtn .botones {
+      position: relative;
+      color: black; }
+  .btnCaja .listaBtnExpan {
+    position: relative;
+    /* Animaciones */ }
+    .btnCaja .listaBtnExpan:hover {
+      color: black;
+      z-index: 10000; }
+    .btnCaja .listaBtnExpan:hover > .enlaceLista {
+      color: black;
+      z-index: 10000; }
+    .btnCaja .listaBtnExpan:hover .cajaListaInterna {
+      display: flex;
+      animation: 300ms ease desplegar 1; }
+
+@keyframes desplegar {
+  from {
+    transform: scaleY(0.5);
+    /* La propiedad transform: scaleY(0.5) junto a la propiedad transform-origin: left top;
+permitirá crear un efecto visual de un submenú que se desenrrolla. */ } }
+    .btnCaja .listaBtnExpan .cajaListaInterna {
+      display: none;
+      position: absolute;
+      /* Esto adyudará a dar el efecto de despliegue del submenú */
+      transform-origin: left right;
+      top: 100%;
+      padding: 0 1rem;
+      width: max-content;
+      margin: 0 auto; }
+      .btnCaja .listaBtnExpan .cajaListaInterna .listaInterna {
+        position: relative;
+        list-style: none;
+        width: max-content; }
+        .btnCaja .listaBtnExpan .cajaListaInterna .listaInterna:hover {
+          color: black;
+          z-index: 10000; }
+        .btnCaja .listaBtnExpan .cajaListaInterna .listaInterna:hover > .enlaceLista {
+          color: black;
+          z-index: 10000; }
+    .btnCaja .listaBtnExpan .enlaceLista {
+      text-decoration: none;
+      position: relative;
+      padding: 0.6rem;
+      height: 100%;
+      display: inline-flex;
+      font-size: 1.5rem;
+      width: 100%; }
+
 .cajaOpciones {
   display: flex;
   padding: 1rem;
@@ -205,22 +270,6 @@ p.blink {
       .cajaResultados .resultadoBusqueda .opcionDestino div {
         padding: 0.5rem;
         text-align: center; }
-      .cajaResultados .resultadoBusqueda .opcionDestino .fa-map-marked-alt {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 1.5rem; }
-        .cajaResultados .resultadoBusqueda .opcionDestino .fa-map-marked-alt:hover {
-          font-size: 2rem;
-          color: red; }
-      .cajaResultados .resultadoBusqueda .opcionDestino .far {
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        font-size: 1.5rem; }
-        .cajaResultados .resultadoBusqueda .opcionDestino .far:hover {
-          font-size: 2rem;
-          color: green; }
   .cajaResultados .loSentimos {
     grid-column: 1/4;
     font-size: 4rem;
@@ -280,8 +329,7 @@ ul {
   padding: 0; }
 
 a {
-  text-decoration: none;
-  list-style: none; }
+  text-decoration: none; }
 
 h1 {
   font-size: 3rem; }
@@ -304,3 +352,12 @@ p {
 
 .mostrar {
   display: block; }
+
+.boton {
+  background-color: var(--secundario);
+  padding: .8rem;
+  border-radius: .8rem;
+  font-size: 1rem; }
+  .boton:hover {
+    cursor: pointer;
+    background-color: var(--terciario); }
