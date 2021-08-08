@@ -109,10 +109,20 @@ p {
     padding: .8rem;
     border-radius: .8rem;
     font-size: 1rem;
+    margin: .5rem;
+    display: flex;
+    width: 30%;
+    justify-content: center;
+
 
     &:hover {
         cursor: pointer;
         background-color: var(--terciario);
 
+    }
+
+    i {
+        margin: 0 .5rem;
+        font-size: 1.2rem;
     }
 }

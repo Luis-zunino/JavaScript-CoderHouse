@@ -1,46 +1,9 @@
 //selectores
 document.querySelector("#buscador").addEventListener("keyup", buscador);
-let depa = document.getElementById("depa");
-let tipos = document.getElementById("tipos");
 let map = L.map("map").setView([-32.70693340531241, -55.98485369606557], 7);
 //Arrays
 let viajes = [];
-let depas = [
-  "--Departamento--",
-  "Artigas",
-  "Canelones",
-  "Cerrolargo",
-  "Colonia",
-  "Durazno",
-  "Flores",
-  "Florida",
-  "Lavalleja",
-  "Maldonado",
-  "Montevideo",
-  "Paysandu",
-  "Río Negro",
-  "Rivera",
-  "Rocha",
-  "Salto",
-  "San José",
-  "Soriano",
-  "Tacuarembo",
-  "Treinta y Tres",
-];
-let tipo = [
-  "--Elige una opción--",
-  "Espacios Verdes",
-  "Playas",
-  "Aguas Termales",
-  "Ciudades",
-];
 
-for (let i = 0; i < depas.length; i++) {
-  depa.innerHTML += `<option id="${i}"><span>${depas[i]}</span></option>`;
-}
-for (let i = 0; i < tipo.length; i++) {
-  tipos.innerHTML += `<option id="${i}">${tipo[i]}</option>`;
-}
 
 //Menu laterla
 $(document).ready(function () {
@@ -114,27 +77,6 @@ function cargarCardViajes(viajes) {
     document.querySelector("#viajes").innerHTML += `
     <li class="opcionDestino">
       <img src="ASSETS/IMG/DESTINOS/unnamed(${elemento.img}).jpg">
-      <div class="btnCaja">
-      <div class="navBtn listaBtnExpan">
-          <p class="botones enlaceLista"><i class="fas fa-search-plus"></i></p>
-          <ul class="cajaListaInterna">
-              <li class="agendar listaInterna">
-                  <p class="botones enlaceLista">
-                      <i class="far fa-calendar-check"></i>
-                  </p>
-              </li>
-              <li class="listaInterna">
-                  <p class="botones enlaceLista">
-                      <i class="far fa-calendar-times"></i>
-                  </p>
-              </li>
-              <li class="listaInterna">
-                  <p class="botones enlaceLista"><i class="fas fa-map-marked-alt"></i>
-                  </p>
-              </li>
-          </ul>
-      </div>
- </div>
       <div> 
         <h3>${elemento.nombre}</h3>
         <span class="contViaje">
@@ -143,7 +85,7 @@ function cargarCardViajes(viajes) {
         </span>
       </div>
 
-      <a id="${elemento.id}" class="boton">Expandir<i class="fas fa-info-circle"></i></a>
+      <a id="${elemento.id}" class="boton"><i class="fas fa-info-circle"></i>Expandir</a>
     </li>
   `;
   });

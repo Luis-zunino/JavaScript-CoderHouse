@@ -136,10 +136,16 @@ header {
 
 article {
     width: 92%;
-    height: 100%;
+    height: Min(700px, 100%);
     margin-left: 7%;
+    margin-bottom: 3rem;
     border-radius: 5px;
     box-shadow: 0px 2px 7px #6d6d6d;
+
+    .contenido {
+        height: Min(700px, 100%);
+
+    }
 }
 
 .red {
@@ -205,103 +211,6 @@ p.blink {
             background: rgba(0, 102, 153, 0);
             top: 248px;
             left: 360px;
-        }
-    }
-}
-
-
-/*--------------Iconos de cada Viaje-------------- */
-
-.btnCaja {
-    text-align: center;
-    display: block;
-    height: max-content;
-    list-style: none;
-    position: relative;
-    padding: .8rem;
-
-    .navBtn {
-        /*Ancho de los botones  */
-        display: flex;
-        width: 15%;
-        padding: 0.5rem;
-        height: 100%;
-        text-align: center;
-
-        .botones {
-            position: relative;
-            color: black;
-
-            // .fa-search-plus{
-            //     position: absolute;
-            //     top: 1rem;
-            //     left: 1rem;
-            // }
-        }
-    }
-
-    .listaBtnExpan {
-        position: relative;
-
-        &:hover {
-            color: black;
-            z-index: 10000;
-        }
-
-        &:hover>.enlaceLista {
-            color: black;
-            z-index: 10000;
-        }
-
-        &:hover .cajaListaInterna {
-            display: flex;
-            animation: 300ms ease desplegar 1;
-        }
-
-        /* Animaciones */
-        @keyframes desplegar {
-            from {
-                transform: scaleY(0.5);
-                /* La propiedad transform: scaleY(0.5) junto a la propiedad transform-origin: left top;
-permitirá crear un efecto visual de un submenú que se desenrrolla. */
-            }
-        }
-
-        .cajaListaInterna {
-            display: none;
-            position: absolute;
-            /* Esto adyudará a dar el efecto de despliegue del submenú */
-            transform-origin: left right;
-            top: 100%;
-            padding: 0 1rem;
-            width: max-content;
-            margin: 0 auto;
-
-            .listaInterna {
-                position: relative;
-                list-style: none;
-                width: max-content;
-
-                &:hover {
-                    color: black;
-                    z-index: 10000;
-                }
-
-                &:hover>.enlaceLista {
-                    color: black;
-                    z-index: 10000;
-                }
-            }
-        }
-
-        .enlaceLista {
-            text-decoration: none;
-            position: relative;
-            padding: 0.6rem;
-            height: 100%;
-            display: inline-flex;
-            font-size: 1.5rem;
-            width: 100%;
         }
     }
 }

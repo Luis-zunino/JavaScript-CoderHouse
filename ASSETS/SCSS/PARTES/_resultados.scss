@@ -9,9 +9,9 @@
         grid-template-columns: repeat(auto-fill, minmax(Min(100%, 20rem), 1fr));
         padding: 0.8rem;
         margin: 1rem;
+        position: relative;
 
         .opcionDestino {
-            //background-color: var(--primario);
             border-radius: 1rem;
             position: relative;
 
@@ -28,6 +28,12 @@
                 text-align: center;
             }
         }
+
+        #volver {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+        }
     }
 
     .loSentimos {
@@ -36,5 +42,9 @@
         text-align: center;
         padding: 1rem;
         margin: 4rem 0;
+    }
+    .cajaBtnRegresar{
+        display: flex;
+        justify-content: flex-end;
     }
 }

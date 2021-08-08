@@ -1,4 +1,3 @@
-@charset "UTF-8";
 header {
   background: #fff;
   padding: 10px 20px;
@@ -102,10 +101,13 @@ header {
 
 article {
   width: 92%;
-  height: 100%;
+  height: Min(700px, 100%);
   margin-left: 7%;
+  margin-bottom: 3rem;
   border-radius: 5px;
   box-shadow: 0px 2px 7px #6d6d6d; }
+  article .contenido {
+    height: Min(700px, 100%); }
 
 .red {
   background: #e74c3c !important;
@@ -155,70 +157,6 @@ p.blink {
       top: 248px;
       left: 360px; }
 
-/*--------------Iconos de cada Viaje-------------- */
-.btnCaja {
-  text-align: center;
-  display: block;
-  height: max-content;
-  list-style: none;
-  position: relative;
-  padding: .8rem; }
-  .btnCaja .navBtn {
-    /*Ancho de los botones  */
-    display: flex;
-    width: 15%;
-    padding: 0.5rem;
-    height: 100%;
-    text-align: center; }
-    .btnCaja .navBtn .botones {
-      position: relative;
-      color: black; }
-  .btnCaja .listaBtnExpan {
-    position: relative;
-    /* Animaciones */ }
-    .btnCaja .listaBtnExpan:hover {
-      color: black;
-      z-index: 10000; }
-    .btnCaja .listaBtnExpan:hover > .enlaceLista {
-      color: black;
-      z-index: 10000; }
-    .btnCaja .listaBtnExpan:hover .cajaListaInterna {
-      display: flex;
-      animation: 300ms ease desplegar 1; }
-
-@keyframes desplegar {
-  from {
-    transform: scaleY(0.5);
-    /* La propiedad transform: scaleY(0.5) junto a la propiedad transform-origin: left top;
-permitirá crear un efecto visual de un submenú que se desenrrolla. */ } }
-    .btnCaja .listaBtnExpan .cajaListaInterna {
-      display: none;
-      position: absolute;
-      /* Esto adyudará a dar el efecto de despliegue del submenú */
-      transform-origin: left right;
-      top: 100%;
-      padding: 0 1rem;
-      width: max-content;
-      margin: 0 auto; }
-      .btnCaja .listaBtnExpan .cajaListaInterna .listaInterna {
-        position: relative;
-        list-style: none;
-        width: max-content; }
-        .btnCaja .listaBtnExpan .cajaListaInterna .listaInterna:hover {
-          color: black;
-          z-index: 10000; }
-        .btnCaja .listaBtnExpan .cajaListaInterna .listaInterna:hover > .enlaceLista {
-          color: black;
-          z-index: 10000; }
-    .btnCaja .listaBtnExpan .enlaceLista {
-      text-decoration: none;
-      position: relative;
-      padding: 0.6rem;
-      height: 100%;
-      display: inline-flex;
-      font-size: 1.5rem;
-      width: 100%; }
-
 .cajaOpciones {
   display: flex;
   padding: 1rem;
@@ -259,7 +197,8 @@ permitirá crear un efecto visual de un submenú que se desenrrolla. */ } }
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(Min(100%, 20rem), 1fr));
     padding: 0.8rem;
-    margin: 1rem; }
+    margin: 1rem;
+    position: relative; }
     .cajaResultados .resultadoBusqueda .opcionDestino {
       border-radius: 1rem;
       position: relative; }
@@ -270,12 +209,19 @@ permitirá crear un efecto visual de un submenú que se desenrrolla. */ } }
       .cajaResultados .resultadoBusqueda .opcionDestino div {
         padding: 0.5rem;
         text-align: center; }
+    .cajaResultados .resultadoBusqueda #volver {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem; }
   .cajaResultados .loSentimos {
     grid-column: 1/4;
     font-size: 4rem;
     text-align: center;
     padding: 1rem;
     margin: 4rem 0; }
+  .cajaResultados .cajaBtnRegresar {
+    display: flex;
+    justify-content: flex-end; }
 
 :root {
   --primario: rgb(241, 241, 241);
@@ -357,7 +303,14 @@ p {
   background-color: var(--secundario);
   padding: .8rem;
   border-radius: .8rem;
-  font-size: 1rem; }
+  font-size: 1rem;
+  margin: .5rem;
+  display: flex;
+  width: 30%;
+  justify-content: center; }
   .boton:hover {
     cursor: pointer;
     background-color: var(--terciario); }
+  .boton i {
+    margin: 0 .5rem;
+    font-size: 1.2rem; }

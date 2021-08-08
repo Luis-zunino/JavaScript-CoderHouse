@@ -32,21 +32,14 @@
                     <a class="amarillo" href="#">
                         <span><i class="material-icons">stay_current_portrait</i></span>
                         Destinos
-                        <span class="notif yellow">2</span>
+                        <span class="notif yellow"></span>
                     </a>
                 </li>
                 <li class="rojo">
                     <a class="rojo" href="#">
                         <span><i class="material-icons">location_on</i></span>
                         Mapa
-                        <span class="notif red">1</span>
-                    </a>
-                </li>
-                <li class="verde">
-                    <a href="#" class="verde">
-                        <span><i class="material-icons">import_contacts</i></span>
-                        Agenda
-                        <span class="notif green"><span id="contadorAgenda"></span> </span>
+                        <span class="notif red"></span>
                     </a>
                 </li>
             </ul>
@@ -61,14 +54,6 @@
                             <input type="text" id="buscador" placeholder="¿Qué lugar deseas visitar?">
                             <input type="button" id="botonBuscador" value="Buscar">
                         </div>
-                        <div>
-                            <select id="depa">
-                                <!--Listar Departamentos-->
-                            </select>
-                            <select id="tipos">
-                                <!--Tipos de lugares-->
-                            </select>
-                        </div>
                     </div>
                 </section>
                 <section>
@@ -78,8 +63,11 @@
                     <div class="cajaResultados">
                         <ul id="viajes" class="resultadoBusqueda">
                         </ul>
-                        <a class="boton" id="volver" title="Regresar al menú principal">Regresar<i
-                                class="fas fa-times"></i></a>
+                        <div class="cajaBtnRegresar">
+                            <a class="boton" id="volver" title="Regresar al menú principal">
+                                <i class="fas fa-times"></i>Regresar
+                            </a>
+                        </div>
                     </div>
                 </section>
                 <section>
@@ -115,8 +103,3 @@
 </body>
 
 </html>
-
-
-
-
-
